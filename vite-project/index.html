@@ -2,23 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image" href="/m.jpg" />
+    <link rel="icon" type="image" href="/m.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./public/styles.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Shepelenko</title>
   </head>
   <body>
     <header> <!-- navigation -->
-
+      <nav class="nav-bg flex justify-between items-center h-16">
+          <p class="font-semibold text-3xl ml-2">Shepelenko Mykhailo</p> 
+          <ul class="flex mr-2 font-normal text-xl">
+            <li class="mr-4 hover:border-b-2 border-red-500"><a href="">Experience</a></li>
+            <li class="mr-4 hover:border-b-2 border-red-500"><a href="">Projects</a></li>
+            <li class="mr-4 hover:border-b-2 border-red-500"><a href="">Contact</a></li>
+          </ul>
+      </nav>
     </header>
 
-    <div class="container">
-      <div> <!-- photo-->
-        
+    <div class="container w-2/3">
+
+      <div class="flex justify-center"> <!-- photo-->
+        <img src="/me.png" alt="photo of Mykhailo" data-aos="zoom-out-up" data-aos-duration="1300">
       </div>
 
-      <div> <!-- name and bio -->
-
+      <div class="flex justify-center"> <!-- name and bio -->
+        <div>
+          <p class="font-bold text-6xl mt-3 mb-4 text-center">Shepelenko Mykhailo</p>
+          <p class="w-fit text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil labore exercitationem explicabo, cumque voluptas ipsum itaque quisquam qui et doloremque dicta omnis atque! Excepturi tempore, eius autem non eveniet deserunt?
+          Quis modi nam commodi ut. Eius velit, impedit ab cupiditate esse nemo voluptas veritatis doloribus tempore unde obcaecati nobis facilis consequatur rem et quae. Vero alias ducimus a aliquid nihil?
+          Suscipit nisi, ducimus dignissimos accusamus velit sit placeat ipsam. Aut, dignissimos sequi. Culpa, sit totam exercitationem laborum numquam, itaque eos magnam est ut pariatur fugiat, dignissimos dolorum nihil provident doloribus..</p>
+        </div>
       </div>
 
       <div> <!-- projects -->
@@ -50,11 +64,14 @@
       </div>
     </div>
 
-    <footer class="bg-gray-200">
+    <!-- <footer class="nav-bg">
       <p class="text-center">© 2024 Shepelenko Mykhailo</p>
-    </footer>
-
+    </footer> -->
     <script type="module" src="./main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
 
