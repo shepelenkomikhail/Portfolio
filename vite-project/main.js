@@ -2,11 +2,11 @@ import './public/styles.css'
 AOS.init();
 
 const images = {
-    "Java logo": `<img src="/java.png" alt="Java logo">`,
     "C# logo": `<img src="/CS.png" alt="C# logo">`,
     "Python logo": `<img src="/python.png" alt="Python logo">`,
     "C++ logo": `<img src="/cpp.png" alt="C++ logo">`,
     "SQL logo": `<img src="/sql.png" alt="SQL logo">`,
+    "Java logo": `<img src="/java.png" alt="Java logo">`,
     "JS logo": `<img src="/js.png" alt="JS logo" class="rounded-full">`,
     "PHP logo": `<img src="/php.png" alt="PHP logo">`,
     "HTML logo": `<img src="/html.png" alt="HTML logo" >`,
@@ -30,7 +30,7 @@ const images = {
       const td = document.createElement('td');
       const image = images[key];
       td.innerHTML = image;
-      td.style.padding = '30px';
+      td.style.padding = '2.5%';
       row.appendChild(td);
       count++;
   }
@@ -43,3 +43,17 @@ const images = {
       return document.createElement('tr');
   }
 
+  const soccer = document.querySelectorAll('#soccer img');
+
+  // Add event listeners to each image
+  soccer.forEach(image => {
+    // Add Tailwind CSS classes on mouse hover
+    image.addEventListener('mouseenter', () => {
+      image.classList.add('scale-110');
+    });
+
+    // Remove Tailwind CSS classes on mouse leave
+    image.addEventListener('mouseleave', () => {
+      image.classList.remove('scale-110');
+    });
+  });
