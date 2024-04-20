@@ -15,7 +15,8 @@ const images = {
     "Figma logo": `<img src="/figma.png" alt="Figma logo">`,
     "Git hub logo": `<img src="/gh.png" alt="Git hub logo">`,
     "Git lab logo": `<img src="/gl.png" alt="Git lab logo">`,
-    "Vite logo": `<img src="/vite.png" alt="Vite logo">`
+    "Vite logo": `<img src="/vite.png" alt="Vite logo">`,
+    "Bootsrap logo": `<img src="/boot.png" alt="Bootsrap logo">`
   };
 
   const skillsTable = document.querySelector('#skills');
@@ -44,16 +45,23 @@ const images = {
   }
 
   const soccer = document.querySelectorAll('#soccer img');
-
-  // Add event listeners to each image
   soccer.forEach(image => {
-    // Add Tailwind CSS classes on mouse hover
     image.addEventListener('mouseenter', () => {
       image.classList.add('scale-110');
     });
 
-    // Remove Tailwind CSS classes on mouse leave
     image.addEventListener('mouseleave', () => {
       image.classList.remove('scale-110');
     });
   });
+
+  const navLinks = document.querySelectorAll('nav a');
+  navLinks.forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
