@@ -44,7 +44,10 @@ const images = {
       return document.createElement('tr');
   }
 
-  const soccer = document.querySelectorAll('#soccer img');
+  const schools = document.querySelectorAll('#experience img');
+  let soccer = Array.from(document.querySelectorAll('#soccer img'));
+  schools.forEach(school => {soccer.push(school);});
+
   soccer.forEach(image => {
     image.addEventListener('mouseenter', () => {
       image.classList.add('scale-110');
