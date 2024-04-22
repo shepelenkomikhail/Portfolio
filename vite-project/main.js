@@ -46,7 +46,7 @@ const images = {
 
   const schools = document.querySelectorAll('#experience img');
   let soccer = Array.from(document.querySelectorAll('#soccer img'));
-  schools.forEach(school => {soccer.push(school);});
+  //schools.forEach(school => {soccer.push(school);});
 
   soccer.forEach(image => {
     image.addEventListener('mouseenter', () => {
