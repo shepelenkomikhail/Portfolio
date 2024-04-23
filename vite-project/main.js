@@ -79,7 +79,7 @@ const header = document.querySelector('header');
       overlayDiv.remove();
     } else {
       const overlayDiv = document.createElement('div');
-      overlayDiv.classList.add('overlay-div', 'opacity-50', 'nav-bg', 'fixed', 'top-0', 'left-0', 'w-full', 'h-full', 'z-10', 'flex', 'justify-center', 'items-center');
+      overlayDiv.classList.add('gap-4', 'overlay-div', 'opacity-50', 'nav-bg', 'fixed', 'top-0', 'left-0', 'w-full', 'h-full', 'z-10', 'flex', 'justify-center', 'items-center');
   
       navLinkss.forEach(link => {
         link.classList.add('block', 'text-2xl', 'text-center', 'py-4', 'border-b', 'border-gray-300');
