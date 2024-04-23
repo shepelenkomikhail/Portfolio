@@ -11,13 +11,18 @@
   <body>
     <header> <!-- navigation -->  
       <nav class="nav-bg flex justify-between items-center h-16">
-          <p class="font-semibold text-3xl ml-2 hover:text-red-800 cursor-help">Shepelenko Mykhailo</p> 
-          <ul class="flex mr-2 font-normal text-xl">
-            <li class="mr-4 hover:text-red-900"><a href="#experience" class="font-semibold">Experience</a></li>
-            <li class="mr-4  hover:text-red-900"><a href="#projects" class="font-semibold">Projects</a></li>
-            <li class="mr-4  hover:text-red-900"><a href="#contact" class="font-semibold">Contact</a></li>
-          </ul>
-      </nav>
+        <p class="font-semibold text-3xl ml-2 hover:text-red-800 cursor-help">Shepelenko Mykhailo</p> 
+        <button id="burger-menu-btn" class="block md:hidden px-2 py-1 text-gray-800 hover:text-red-800 focus:outline-none">
+            <svg class="h-10 w-10 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M3 5h18a1 1 0 0 1 0 2H3a1 1 0 1 1 0-2zm0 6h18a1 1 0 0 1 0 2H3a1 1 0 0 1 0-2zm0 6h18a1 1 0 0 1 0 2H3a1 1 0 0 1 0-2z"/>
+            </svg>
+        </button>
+        <ul id="nav-links" class="hidden md:flex mr-2 font-normal text-xl gap-8">
+            <li class=" hover:text-red-900 navl"><a href="#experience" class="font-semibold">Experience</a></li>
+            <li class=" hover:text-red-900 navl"><a href="#projects" class="font-semibold">Projects</a></li>
+            <li class="mr-4 hover:text-red-900 navl"><a href="#contact" class="font-semibold">Contact</a></li>
+        </ul>
+    </nav>
     </header>
 
     <div class="container w-2/3">
@@ -29,9 +34,16 @@
       <div class="flex justify-center" > <!-- name and bio -->
         <div>
           <p class="font-bold text-6xl mt-3 mb-4 text-center" data-aos="zoom-out-up" data-aos-duration="1300" data-aos-once="true">Shepelenko Mykhailo</p>
-          <p class="w-fit text-center" data-aos="zoom-out-up" data-aos-duration="1300">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil labore exercitationem explicabo, cumque voluptas ipsum itaque quisquam qui et doloremque dicta omnis atque! Excepturi tempore, eius autem non eveniet deserunt?
-          Quis modi nam commodi ut. Eius velit, impedit ab cupiditate esse nemo voluptas veritatis doloribus tempore unde obcaecati nobis facilis consequatur rem et quae. Vero alias ducimus a aliquid nihil?
-          Suscipit nisi, ducimus dignissimos accusamus velit sit placeat ipsam. Aut, dignissimos sequi. Culpa, sit totam exercitationem laborum numquam, itaque eos magnam est ut pariatur fugiat, dignissimos dolorum nihil provident doloribus..</p>
+          <div class="w-fit text-center" data-aos="zoom-out-up" data-aos-duration="1300">
+            <p class="font-semibold text-3xl text-center text-gray-600 mb-2">Software Developer</p>
+            <!-- <p class="font-semibold text-3xl text-center text-gray-600">Budapest, Hungary</p> -->
+            <p class="text-center text-gray-500">I am 18 y.o. goal-oriented person from Ukraine currently living in Budapest, Hungary. 
+              I graduated from a high school in Sumy, Ukraine, moved to Germany and after that to Hungary. 
+              I always try my best to improve myself and study as much as it's possible. 
+              My hobbies are programming, football, and reading. I am a native speaker of Ukrainian and Russian, also I speak 
+              English well and know basic German and Hungarian. 
+            </p>
+          </div>
         </div>
       </div>
       <div id="projects"> </div> <!-- helper -->
@@ -39,7 +51,8 @@
         <div>
           <p class="headers">Projects</p>
           
-          <div class="w-1/3 h-auto bg-base-100 shadow-xl rounded-lg hover:scale-105 bg-yellow-100"> <!-- 1st project -->
+          <div class="lg:w-1/3 md:w-1/2 sm:w-full h-auto bg-base-100 shadow-xl rounded-lg hover:scale-105 bg-yellow-100"> <!-- 1st project -->
+            <a href="https://ik-1.vercel.app/">
             <figure><img src="/ik.jpg" alt="IK game image" class="rounded-lg"></figure> <!-- image of project -->
             <div>
               <p class="text-center font-semibold text-2xl pt-2">IK Game</p> <!-- name -->
@@ -52,7 +65,9 @@
                 <img src="/tailw.png" alt="Tailwindcss logo" width="60px" height="30px" class="pl-2">
               </div>
             </div>
+            </a>
           </div>
+
         </div>
       </div>
 
@@ -97,8 +112,8 @@
         <div>
           <p class="headers">Work experience</p>
           <div class="flex justify-center">
-            <div class="flex-col justify-center">
-              <img src="ew.png" alt="elita work logo" class="justify-center">
+            <div class="flex-col justify-center  rounded-lg hover:shadow-lg">
+              <a href="https://elitawork.yuriipalamarchuk.com/"><img src="ew.png" alt="elita work logo" class="justify-center"></a>
               <p class="text-center text-gray-600 font-semibold text-xl">Recruiter</p>
               <p class="text-center text-lg text-gray-500">11.2022-11.2023</p>
             </div>
@@ -135,9 +150,9 @@
         <div>
           <p class="headers">Profiles</p>
           <div class="flex justify-center">
-              <a href="https://www.instagram.com/shepelenkomikhail/" class="w-1/3 h-1/3 rounded-full hover:shadow-2xl"><img src="/ins.png" alt="instagram logo"></a> <!-- instagram -->
-              <img src="/instph.png" alt="Mykhailo's photo">
-              <a href="https://ada1bank.mlsz.hu/player?itemId=1419545" class="w-1/3 h-1/3 rounded-full hover:shadow-2xl"><img src="/bls.png" alt="blsz logo"></a><!-- blsz -->
+              <a href="https://www.instagram.com/shepelenkomikhail/" class="w-1/3 h-1/3 rounded-full hover:shadow-2xl mr-12 sm:mr-0"><img src="/ins.png" alt="instagram logo"></a> <!-- instagram -->
+              <img src="/instph.png" alt="Mykhailo's photo" class="hidden lg:block relative">
+              <a href="https://ada1bank.mlsz.hu/player?itemId=1419545" class="w-1/3 h-1/3 rounded-full hover:shadow-2xl ml-1 sm:ml-0"><img src="/bls.png" alt="blsz logo"></a><!-- blsz -->
           </div>
         </div>
       </div>
@@ -145,7 +160,7 @@
       <div class="flex justify-center mt-5" data-aos="zoom-out-up" data-aos-duration="1300" data-aos-delay="300"> <!-- contact -->
         <div> 
           <p class="headers">Contact</p>
-          <div class="flex gap-36"> <!-- 6 links -->
+          <div class="flex md:gap-36 "> <!-- 6 links -->
             <div class="space-y-5"> <!-- left col -->
               <div class="flex justify-start items-center"> <!-- phone -->
                 <a href="tel:+491718142546">
@@ -200,7 +215,7 @@
      </div>
     </div>
     <footer class="nav-bg">
-      <p class="text-center">© 2024 Shepelenko Mykhailo</p>
+      <p class="text-center text-lg">© 2024 Shepelenko Mykhailo</p>
     </footer>
 
     <script type="module" src="./main.js"></script>

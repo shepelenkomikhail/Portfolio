@@ -46,7 +46,6 @@ const images = {
 
   const schools = document.querySelectorAll('#experience img');
   let soccer = Array.from(document.querySelectorAll('#soccer img'));
-  //schools.forEach(school => {soccer.push(school);});
 
   soccer.forEach(image => {
     image.addEventListener('mouseenter', () => {
@@ -68,3 +67,26 @@ const images = {
         });
     });
 });
+
+const burgerMenuBtn = document.getElementById('burger-menu-btn');
+const navLinkss = document.querySelectorAll('.navl');
+const header = document.querySelector('header');
+
+  burgerMenuBtn.addEventListener('click', function() {
+    const overlayDiv = header.querySelector('.overlay-div');
+  
+    if (overlayDiv) {
+      overlayDiv.remove();
+    } else {
+      const overlayDiv = document.createElement('div');
+      overlayDiv.classList.add('overlay-div', 'opacity-50', 'nav-bg', 'fixed', 'top-0', 'left-0', 'w-full', 'h-full', 'z-10', 'flex', 'justify-center', 'items-center');
+  
+      navLinkss.forEach(link => {
+        link.classList.add('block', 'text-2xl', 'text-center', 'py-4', 'border-b', 'border-gray-300');
+        overlayDiv.appendChild(link.cloneNode(true));
+      });
+  
+      header.appendChild(overlayDiv);
+    }
+  });
+  
