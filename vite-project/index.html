@@ -11,7 +11,7 @@
   <body>
     <header> <!-- navigation -->  
       <nav class="nav-bg flex justify-between items-center h-16">
-        <p class="font-semibold text-3xl ml-2 cursor-help navl">Shepelenko Mykhailo</p> 
+        <p class="font-semibold text-3xl ml-2 cursor-help name">Shepelenko Mykhailo</p> 
         <button id="burger-menu-btn" class="block md:hidden px-2 py-1 text-gray-800 hover:text-red-800 focus:outline-none">
             <svg class="h-10 w-10 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M3 5h18a1 1 0 0 1 0 2H3a1 1 0 1 1 0-2zm0 6h18a1 1 0 0 1 0 2H3a1 1 0 0 1 0-2zm0 6h18a1 1 0 0 1 0 2H3a1 1 0 0 1 0-2z"/>
@@ -160,8 +160,8 @@
       <div class="flex justify-center mt-5" data-aos="zoom-out-up" data-aos-duration="1300" data-aos-delay="300"> <!-- contact -->
         <div> 
           <p class="headers">Contact</p>
-          <div class="flex md:gap-36"> <!-- 6 links -->
-            <div class="space-y-5"> <!-- left col -->
+          <div class="flex flex-col sm:flex-row md:gap-36 sm:gap-0"> <!-- 6 links -->
+            <div class="space-y-5 ml-4 sm:ml-0"> <!-- left col -->
               <div class="flex justify-start items-center"> <!-- phone -->
                 <a href="tel:+491718142546">
                   <img src="ph.png" alt="phone image" class="w-14 transition hover:scale-105">
@@ -204,7 +204,7 @@
             </div>
           </div>
           
-          <div class="flex justify-center items-center"> <!-- github -->
+          <div class="flex justify-start sm:justify-center items-center"> <!-- github -->
             <a href="https://github.com/shepelenkomikhail">
               <img src="gh.png" alt="github icon" class="w-24 transition hover:scale-105">
             </a>

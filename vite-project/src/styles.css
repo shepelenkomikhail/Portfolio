@@ -10,18 +10,26 @@
   @apply font-semibold text-5xl mb-4 text-center;
 }
 
-.navl {
+.navl, .name {
   @apply tracking-[1px] text-black relative transition-colors duration-300;
 }
 
-.navl:hover {
+.navl:hover , .name:hover{
   @apply text-red-800; 
 }
 
-.navl::after {
+.navl::after, .name::after {
   @apply content-[''] bg-red-800 h-[3px] w-[0%] left-0 bottom-0 rounded-xl absolute duration-300;
 }
 
-.navl:hover::after {
+.navl:hover::after, .name:hover::after {
   @apply w-[100%];
+}
+
+p {
+  font-family: Georgia, serif;
+}
+
+.navl {
+  font-family: Comic Sans MS, Comic Sans, cursive;
 }
