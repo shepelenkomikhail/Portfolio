@@ -922,7 +922,7 @@ p {
 }
 
 .navl {
-  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-family: "Poppins", sans-serif;
 }
 
 .hover\:scale-105:hover {
@@ -1011,6 +1011,11 @@ p {
 
   .sm\:gap-0 {
     gap: 0px;
+  }
+
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 
