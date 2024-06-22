@@ -2,47 +2,53 @@ import './public/styles.css'
 AOS.init();
 
 const images = {
-    "C# logo": `<img src="/CS.png" alt="C# logo">`,
-    "Python logo": `<img src="/python.png" alt="Python logo">`,
-    "C++ logo": `<img src="/cpp.png" alt="C++ logo">`,
-    "SQL logo": `<img src="/sql.png" alt="SQL logo">`,
-    "Java logo": `<img src="/java.png" alt="Java logo">`,
-    "JS logo": `<img src="/js.png" alt="JS logo" class="rounded-full">`,
-    "PHP logo": `<img src="/php.png" alt="PHP logo">`,
-    "HTML logo": `<img src="/html.png" alt="HTML logo" >`,
-    "CSS logo": `<img src="/css.png" alt="CSS logo">`,
-    "Tailwindcss logo": `<img src="/tailw.png" alt="Tailwindcss logo">`,
-    "Figma logo": `<img src="/figma.png" alt="Figma logo">`,
-    "Git hub logo": `<img src="/gh.png" alt="Git hub logo">`,
-    "Git lab logo": `<img src="/gl.png" alt="Git lab logo">`,
-    "Vite logo": `<img src="/vite.png" alt="Vite logo">`,
-    "Bootsrap logo": `<img src="/boot.png" alt="Bootsrap logo">`
+  "JS logo": `<img src="/js.png" alt="JS logo" class="rounded-full" style="width: 100px; height: 100px">`,
+  "TS logo": `<img src="/ts.png" alt="TS logo" style="width: 100px; height: 100px">`,
+  "React logo": `<img src="/react.png" alt="React logo" style="width: 100px; height: 100px">`,
+  "Java logo": `<img src="/java.png" alt="Java logo" style="width: 100px; height: 100px">`, 
+  "SQL logo": `<img src="/sql.png" alt="SQL logo" style="width: 100px; height: 100px">`,
+  "PHP logo": `<img src="/php.png" alt="PHP logo" style="width: 100px; height: 100px">`,
+  "Vite logo": `<img src="/vite.png" alt="Vite logo" style="width: 100px; height: 100px">`,
+  "HTML logo": `<img src="/html.png" alt="HTML logo" style="width: 100px; height: 100px">`,
+  "CSS logo": `<img src="/css.png" alt="CSS logo" style="width: 100px; height: 100px">`,
+  "C# logo": `<img src="/CS.png" alt="C# logo" style="width: 100px; height: 100px">`,
+  "C logo": `<img src="/C.png" alt="C logo" style="width: 100px; height: 100px">`,
+  "Python logo": `<img src="/python.png" alt="Python logo" style="width: 100px; height: 100px">`,
+  "Git hub logo": `<img src="/gh.png" alt="Git hub logo" style="width: 100px; height: 100px">`,
+  "Git lab logo": `<img src="/gl.png" alt="Git lab logo" style="width: 100px; height: 100px">`,
+  "Tailwindcss logo": `<img src="/tailw.png" alt="Tailwindcss logo" style="width: 100px; height: 100px">`,
+  "Bootsrap logo": `<img src="/boot.png" alt="Bootsrap logo" style="width: 100px; height: 100px">`,
+  "Chakra logo": `<img src="/chakra.png" alt="Chakra logo" style="width: 100px; height: 100px">`,
+  "Figma logo": `<img src="/figma.png" alt="Figma logo" style="width: 100px; height: 100px">`,
   };
 
-  const skillsTable = document.querySelector('#skills');
-  let count = 0;
-  let row = createRow();
-  
-  for (const key in images) {
-      if (count % 5 === 0 && count !== 0) {
-          skillsTable.appendChild(row);
-          row = createRow();
-      }
-      const td = document.createElement('td');
-      const image = images[key];
-      td.innerHTML = image;
-      td.style.padding = '2.5%';
-      row.appendChild(td);
-      count++;
+  const skillsTable = document.querySelector('#skillsT');
+  for(const key in images){
+    skillsTable.innerHTML += images[key];
   }
+  // let count = 0;
+  // let row = createRow();
+  
+  // for (const key in images) {
+  //     if (count % 5 === 0 && count !== 0) {
+  //         skillsTable.appendChild(row);
+  //         row = createRow();
+  //     }
+  //     const td = document.createElement('td');
+  //     const image = images[key];
+  //     td.innerHTML = image;
+  //     td.style.padding = '2.5%';
+  //     row.appendChild(td);
+  //     count++;
+  // }
 
-  if (row.children.length > 0) {
-      skillsTable.appendChild(row);
-  }
+  // if (row.children.length > 0) {
+  //     skillsTable.appendChild(row);
+  // }
   
-  function createRow() {
-      return document.createElement('tr');
-  }
+  // function createRow() {
+  //     return document.createElement('tr');
+  // }
 
   const schools = document.querySelectorAll('#experience img');
   let soccer = Array.from(document.querySelectorAll('#soccer img'));
