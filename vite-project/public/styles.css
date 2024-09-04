@@ -769,6 +769,14 @@ video {
   width: 100%;
 }
 
+.w-11\/12 {
+  width: 91.666667%;
+}
+
+.w-3\/4 {
+  width: 75%;
+}
+
 .cursor-help {
   cursor: help;
 }
@@ -1162,6 +1170,18 @@ p {
 
   .lg\:w-44 {
     width: 11rem;
+  }
+
+  .lg\:w-1\/4 {
+    width: 25%;
+  }
+
+  .lg\:w-3\/5 {
+    width: 60%;
+  }
+
+  .lg\:w-52 {
+    width: 13rem;
   }
 
   .lg\:gap-44 {
