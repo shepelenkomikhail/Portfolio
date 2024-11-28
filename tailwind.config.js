@@ -4,11 +4,18 @@ export default {
   theme: {
     extend: {
       colors: {
+        buttonYellow: "#F5EE84",
 
       },
       boxShadow: {
         'custom-blur': '0px 1px 4px 0px rgba(0, 0, 0, 0.01)',
       },
+      fontSize: {
+        '7xl': '86px',
+      },
+      borderRadius: {
+        'extra': '100px',
+      }
     },
   },
   plugins: [],

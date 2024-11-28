@@ -1,9 +1,13 @@
 import Header from "../components/Header.tsx";
+import Introduction from "../components/Introduction.tsx";
 
 export default function Main() {
     return(
-        <main className={"grid grid-cols-12"}>
+        <>
             <Header />
-        </main>
+            <main className={"grid grid-cols-12 mt-24"}>
+                <Introduction />
+            </main>
+        </>
     );
 }
