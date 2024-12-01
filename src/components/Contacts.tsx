@@ -2,7 +2,7 @@ import ContactIcons from "./ContactIcons.tsx";
 
 export default function Contacts() {
     return (
-        <div className="flex flex-col gap-24 mb-48">
+        <div className="flex flex-col gap-24 mb-24">
             <div>
                 <h1 className="text-titleYellow">contact me.</h1>
                 <p className="text-lg w-8/12 font-medium">Available 24/7!</p>

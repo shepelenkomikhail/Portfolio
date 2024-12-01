@@ -3,6 +3,7 @@ import Introduction from "../components/Introduction.tsx";
 import AboutMe from "../components/AboutMe.tsx";
 import Work from "../components/Work.tsx";
 import Contacts from "../components/Contacts.tsx";
+import Footer from "../components/Footer.tsx";
 
 
 export default function Main() {
@@ -17,6 +18,7 @@ export default function Main() {
                     <Contacts />
                 </div>
             </main>
+            <Footer />
         </>
     );
 }
