@@ -15,7 +15,10 @@ export default {
       },
       borderRadius: {
         'extra': '100px',
-      }
+      },
+      width: {
+        '128': '32rem',
+      },
     },
   },
   plugins: [],

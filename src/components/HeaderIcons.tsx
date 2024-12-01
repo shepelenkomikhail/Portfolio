@@ -4,7 +4,7 @@ import FacebookIcon from '../assets/sm/facebook.svg';
 
 export const HeaderIcons = () => {
   return (
-      <div className="flex flex-row align-center gap-5">
+      <div className="flex flex-row align-center gap-5 2xl:gap-8">
           <a href={"https://www.linkedin.com/in/shepelenkomykhailo/"} target={"_blank"}>
               <img src={LinkedInIcon} alt="LinkedIn"/>
           </a>

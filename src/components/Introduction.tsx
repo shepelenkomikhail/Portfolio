@@ -1,6 +1,4 @@
-
 export default function Introduction() {
-
     return (
         <div className="flex justify-between items-center">
             <div className="flex flex-col items-start">
@@ -16,9 +14,11 @@ export default function Introduction() {
                                            transition-transform rounded-md opacity-90 w-full h-full
                                            group-hover:translate-x-0 group-hover:translate-y-0">
                     </div>
-                    <button className="absolute w-full h-full border border-[#474306] rounded-md text-gray-900">
-                        <span className="relative z-10 text-[#474306]">Resume</span>
-                    </button>
+                    <a href="./CV.pdf" download="Shepelenko_Mykhailo_CV.pdf">
+                        <button className="absolute w-full h-full border border-[#474306] rounded-md text-gray-900">
+                            <span className="relative z-10 text-[#474306]">Resume</span>
+                        </button>
+                    </a>
                 </div>
             </div>
 
