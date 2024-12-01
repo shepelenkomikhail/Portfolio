@@ -5,7 +5,7 @@ export default {
     extend: {
       colors: {
         buttonYellow: "#F5EE84",
-
+        titleYellow: "#EEE776",
       },
       boxShadow: {
         'custom-blur': '0px 1px 4px 0px rgba(0, 0, 0, 0.01)',

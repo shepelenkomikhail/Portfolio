@@ -2,7 +2,7 @@
 export default function Introduction() {
 
     return (
-        <div className="col-span-10 col-start-2 flex justify-between items-center">
+        <div className="flex justify-between items-center">
             <div className="flex flex-col items-start">
                 <span>
                     <h2 className="mb-3">Hello, I'm Mike,</h2>

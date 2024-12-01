@@ -14,7 +14,7 @@ export default function Header(){
 
     return (
         <header className="col-span-12 grid grid-cols-12 shadow-gray-500 shadow-custom-blur">
-            <div className="col-span-10 col-start-2 flex flex-row my-8 justify-between items-center">
+            <div className="lg:col-span-10 2xl:col-span-8 lg:col-start-2 2xl:col-start-3 flex flex-row my-8 justify-between items-center">
                 <h3>Shepelenko Mykhailo</h3>
                 <div className="flex flex-row gap-5 items-baseline">
                     <a onClick={():void|Promise<void> => navigate("/aboutme")}>About me</a>
