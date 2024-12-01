@@ -1,12 +1,12 @@
-import javascript from "../assets/javascript.svg";
-import typescript from "../assets/typescript.svg";
-import react from "../assets/react.svg";
-import java from "../assets/java.svg";
-import python from "../assets/python.svg";
-import nodejs from "../assets/nodejs.svg";
-import git from "../assets/git.svg";
-import figma from "../assets/figma.svg";
-import {Skill} from "./Skill.ts";
+import javascript from "../assets/languages/javascript.svg";
+import typescript from "../assets/languages/typescript.svg";
+import react from "../assets/languages/react.svg";
+import java from "../assets/languages/java.svg";
+import python from "../assets/languages/python.svg";
+import nodejs from "../assets/languages/nodejs.svg";
+import git from "../assets/languages/git.svg";
+import figma from "../assets/languages/figma.svg";
+import {Skill} from "./types/Skill.ts";
 
 export const mainSkills: Skill[] = [
     { name: "javascript", path: javascript },

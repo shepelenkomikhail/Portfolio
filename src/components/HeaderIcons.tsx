@@ -1,6 +1,6 @@
-import LinkedInIcon from '../assets/linkedin.svg';
-import GithubIcon from '../assets/github.svg';
-import FacebookIcon from '../assets/facebook.svg';
+import LinkedInIcon from '../assets/sm/linkedin.svg';
+import GithubIcon from '../assets/sm/github.svg';
+import FacebookIcon from '../assets/sm/facebook.svg';
 
 export const HeaderIcons = () => {
   return (

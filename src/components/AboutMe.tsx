@@ -1,5 +1,5 @@
 import mainSkills from "../storage/mainSkills.ts";
-import {Skill} from "../storage/Skill.ts";
+import {Skill} from "../storage/types/Skill.ts";
 import React from "react";
 
 export default function AboutMe() {

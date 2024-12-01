@@ -1,6 +1,7 @@
 import Header from "../components/Header.tsx";
 import Introduction from "../components/Introduction.tsx";
 import AboutMe from "../components/AboutMe.tsx";
+import Work from "../components/Work.tsx";
 
 
 export default function Main() {
@@ -11,6 +12,7 @@ export default function Main() {
                 <div className="lg:col-span-10 2xl:col-span-8 lg:col-start-2 2xl:col-start-3 flex flex-col gap-48">
                     <Introduction />
                     <AboutMe />
+                    <Work />
                 </div>
             </main>
         </>
