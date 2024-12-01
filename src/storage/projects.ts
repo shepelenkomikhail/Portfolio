@@ -10,14 +10,7 @@ import javascript from "../assets/languages/javascript.svg";
 import java from "../assets/languages/java.svg";
 import maven from "../assets/languages/maven.svg";
 import mysql from "../assets/languages/mysql.svg";
-
-import bombermanImg from "../assets/projlogos/bomberman.png";
-import carRentalImg from "../assets/projlogos/carrental.png";
-import jobBoardImg from "../assets/projlogos/jobboard.png";
-import pebbleImg from "../assets/projlogos/pebble.png";
-import snakeImg from "../assets/projlogos/snake.png";
-import ikLogoImg from "../assets/projlogos/IK Logo.png";
-import rickMortyImg from "../assets/projlogos/rickmorty.png";
+import chakra from "../assets/languages/chakra.svg";
 
 const projects: Project[] = [
     {
@@ -31,7 +24,7 @@ const projects: Project[] = [
             { name: "CSS", path: css },
             { name: "Tailwind", path: tailwind }
         ],
-        img: jobBoardImg,
+        img: "./projlogos/jobboard.png",
         github: "https://github.com/shepelenkomikhail/Job-Portal",
         projectLink: "https://job-portal-one-blush.vercel.app/"
     },
@@ -47,7 +40,7 @@ const projects: Project[] = [
             { name: "Tailwind", path: tailwind },
             { name: "Node.js", path: nodejs }
         ],
-        img: carRentalImg,
+        img: "./projlogos/carrental.png",
         github: "https://github.com/shepelenkomikhail/udemx-test",
         projectLink: "https://shepelenkomikhail.github.io/udemx-test/"
     },
@@ -61,54 +54,54 @@ const projects: Project[] = [
             { name: "CSS", path: css },
             { name: "Tailwind", path: tailwind }
         ],
-        img: ikLogoImg,
+        img: "./projlogos/IKLogo.png",
         github: "https://github.com/shepelenkomikhail/IK-1",
         projectLink: "https://ik-1.vercel.app/"
     },
     {
         id: 4,
         title: "Bomberman 2D",
-        description: "Java 2D game build in group of 4 people as an university project. The application is built using pure Java. Multiplayer and competition modes are core functionalities. Players can interact with each other and monster characters and use many kinds of power-ups and curses.",
+        description: "Java 2D game built in group of 4 people as an university project. The application is built using pure Java. Multiplayer and competition modes are core functionalities. Players can interact with each other and monster characters and use many kinds of power-ups and curses.",
         techStack: [
             { name: "Java", path: java },
             { name: "Maven", path: maven }
         ],
-        img: bombermanImg,
+        img: "./projlogos/bomberman.png",
         github: "https://github.com/shepelenkomikhail/Boombastic"
     },
     {
         id: 5,
-        title: "Rick&Morty characters library",
+        title: "Rick&Morty library",
         description: "This project is UI visualisation of all characters of Rick&Morty series. Data is taken from their official API.",
         techStack: [
             { name: "TypeScript", path: typescript },
             { name: "React", path: react },
             { name: "Tailwind", path: tailwind },
-            { name: "Chakra", path: "../assets/languages/chakra.svg" }
+            { name: "Chakra", path: chakra }
         ],
-        img: rickMortyImg,
+        img: "./projlogos/rickmorty.png",
         github: "https://github.com/shepelenkomikhail/RickMorty",
         projectLink: "https://shepelenkomikhail.github.io/RickMorty/"
     },
     {
         id: 6,
         title: "Snake game",
-        description: "Java 2D game build as an university project. The application gives opportunity to choose their names and color of the snakes. There is a database integrated and table shows top players of all times.",
+        description: "Java 2D game built as an university project. The application gives opportunity to choose their names and color of the snakes. There is a database integrated and table shows top players of all times.",
         techStack: [
             { name: "Java", path: java },
             { name: "MySQL", path: mysql }
         ],
-        img: snakeImg,
+        img: "./projlogos/snake.png",
         github: "https://github.com/shepelenkomikhail/Tron-Game"
     },
     {
         id: 7,
         title: "Pebble game",
-        description: "Java 2D game build as an university project. The application gives opportunity to choose the board size for players. Users play against each other until no more 'pebbles' left.",
+        description: "Java 2D game built as an university project. The application gives opportunity to choose the board size for players. Users play against each other until no more 'pebbles' left.",
         techStack: [
             { name: "Java", path: java }
         ],
-        img: pebbleImg,
+        img: "./projlogos/pebble.png",
         github: "https://github.com/shepelenkomikhail/Pebble-Game"
     }
 ];

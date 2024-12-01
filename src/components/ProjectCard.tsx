@@ -13,7 +13,7 @@ export default function ProjectCard(id: ProjectCardProps) {
 
     return (
         <div className="flex gap-20 items-start">
-            <img className="w-[380px] h-[380px] rounded-md" src={project.img} alt={project.title}></img>
+            <img className="w-[380px] h-[380px] rounded-md object-cover" src={project.img} alt={project.title}></img>
             <div className="flex flex-col gap-10">
                 <h3 className="text-5xl">{project.title}</h3>
                 <div className="flex flex-wrap gap-7">
