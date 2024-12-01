@@ -7,7 +7,7 @@ import ContactIcons from "../components/ContactIcons.tsx";
 export default function Projects() {
     return (
         <>
-            <Header/>
+            <Header currentPage={"projects"}/>
             <main className={"grid grid-cols-12 mt-8"}>
                 <div className="lg:col-span-10 2xl:col-span-8 lg:col-start-2 2xl:col-start-3 flex flex-col gap-44">
                     <div className="flex flex-col gap-12">
@@ -27,7 +27,7 @@ export default function Projects() {
                                 See more on GitHub...
                             </span>
                         </a>
-                        <div className="flex justify-center w-full my-8">
+                        <div className="flex justify-center w-full my-4">
                             <ContactIcons />
                         </div>
                     </div>

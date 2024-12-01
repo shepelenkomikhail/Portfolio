@@ -13,7 +13,7 @@ import {LangSkill} from "../storage/types/LangSkill.tsx";
 export default function About() {
     return(
         <>
-            <Header/>
+            <Header currentPage={"aboutme"}/>
             <main className={"grid grid-cols-12 mt-8"}>
                 <div className="lg:col-span-10 2xl:col-span-8 lg:col-start-2 2xl:col-start-3 flex flex-col gap-44">
                     <div className="flex flex-col gap-36">
@@ -107,7 +107,7 @@ export default function About() {
                     </div>
                 </div>
             </main>
-            <Footer/>
+            <Footer />
         </>
     );
 }
