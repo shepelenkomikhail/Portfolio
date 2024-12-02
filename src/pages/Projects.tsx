@@ -9,12 +9,12 @@ export default function Projects() {
         <>
             <Header currentPage={"projects"}/>
             <main className={"grid grid-cols-12 mt-8"}>
-                <div className="lg:col-span-10 2xl:col-span-8 lg:col-start-2 2xl:col-start-3 flex flex-col gap-44">
+                <div className="col-span-10 2xl:col-span-8 col-start-2 2xl:col-start-3 flex flex-col gap-44">
                     <div className="flex flex-col gap-12">
                         <div>
                             <h1 className="text-titleYellow">projects.</h1>
                         </div>
-                        <div className="flex flex-wrap gap-24">
+                        <div className="flex flex-wrap gap-20 lg:gap-24">
                             {
                                 Array.from({length: 7}, (_: unknown, i: number): ReactElement => (
                                     <ProjectCard key={i} id={i}/>

@@ -9,10 +9,10 @@ export default function Work() {
     }
 
     return (
-        <div className="flex flex-col gap-24">
+        <div className="flex flex-col gap-16 lg:gap-24">
             <div>
                 <h1 className="text-titleYellow">work.</h1>
-                <p className="text-lg w-8/12">There are some featured projects I’ve done describing my skills.</p>
+                <p className="text-md lg:text-lg w-full lg:w-8/12 mt-4">There are some featured projects I’ve done describing my skills.</p>
             </div>
             <div className="flex flex-wrap gap-24">
                 {

@@ -1,1 +1,1 @@
-export type CurrentPage = "aboutme" | "projects" | "contacts";
+export type CurrentPage = "aboutme" | "projects" | "contacts" | "home";

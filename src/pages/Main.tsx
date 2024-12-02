@@ -9,9 +9,9 @@ import Footer from "../components/Footer.tsx";
 export default function Main() {
     return(
         <>
-            <Header currentPage={"contacts"}/>
-            <main className={"grid grid-cols-12 mt-24"}>
-                <div className="lg:col-span-10 2xl:col-span-8 lg:col-start-2 2xl:col-start-3 flex flex-col gap-44">
+            <Header currentPage={"home"}/>
+            <main className={"grid grid-cols-12 mt-12 lg:mt-24"}>
+                <div className="col-span-10 2xl:col-span-8 col-start-2 lg:col-start-2 2xl:col-start-3 flex flex-col gap-28 lg:gap-44">
                     <Introduction />
                     <AboutMe />
                     <Work />

@@ -5,7 +5,7 @@ export const Education: EducationWork[] = [
         period: "2022-2025 (expected)",
         name: "Eötvös Loránd University",
         place: "Budapest, Hungary",
-        title: "Bachelor of Science in Computer Science",
+        title: "Bachelor in Computer Science",
         description: "While pursuing my degree, I am continually growing both as a programmer and as an individual. University provides me with opportunities to interact with people from diverse countries, helping me understand their cultures and perspectives. I am also gaining essential computer science knowledge in areas such as Advanced Mathematics, Probability and Statistics, Algorithms and Data Structures, Object-Oriented Programming, Concurrent, Imperative, and Functional Programming, Programming and Computation Theory, Telecommunications, Artificial Intelligence, Machine Learning, and Web Development."
     },
     {

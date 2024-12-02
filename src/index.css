@@ -15,7 +15,7 @@
 }
 
 h1 {
-    @apply text-7xl font-bold;
+    @apply text-5xl lg:text-7xl font-bold;
 }
 
 h2 {
@@ -24,6 +24,10 @@ h2 {
 
 h3 {
   @apply text-2xl font-semibold;
+}
+
+h4 {
+    @apply text-3xl lg:text-7xl font-bold;
 }
 
 a {
