@@ -30,6 +30,20 @@ const projects: Project[] = [
     },
     {
         id: 2,
+        title: "2D Board game",
+        description: "A JS game built as a university project. A user can move the character across the board, dig the cells, and find some lost details. Besides, there is multiplayer included and limited moving steps.",
+        techStack: [
+            { name: "JavaScript", path: javascript },
+            { name: "HTML", path: html },
+            { name: "CSS", path: css },
+            { name: "Tailwind", path: tailwind }
+        ],
+        img: "./projlogos/IKLogo.png",
+        github: "https://github.com/shepelenkomikhail/IK-1",
+        projectLink: "https://ik-1.vercel.app/"
+    },
+    {
+        id: 3,
         title: "Car rental app",
         description: "An application built as a catalog of cars available to rent within the company. A user can book a car, fill a form which calculates the price, check the car description, and search for a specific one.",
         techStack: [
@@ -44,20 +58,7 @@ const projects: Project[] = [
         github: "https://github.com/shepelenkomikhail/udemx-test",
         projectLink: "https://shepelenkomikhail.github.io/udemx-test/"
     },
-    {
-        id: 3,
-        title: "2D Board game",
-        description: "A JS game built as a university project. A user can move the character across the board, dig the cells, and find some lost details. Besides, there is multiplayer included and limited moving steps.",
-        techStack: [
-            { name: "JavaScript", path: javascript },
-            { name: "HTML", path: html },
-            { name: "CSS", path: css },
-            { name: "Tailwind", path: tailwind }
-        ],
-        img: "./projlogos/IKLogo.png",
-        github: "https://github.com/shepelenkomikhail/IK-1",
-        projectLink: "https://ik-1.vercel.app/"
-    },
+
     {
         id: 4,
         title: "Bomberman 2D",

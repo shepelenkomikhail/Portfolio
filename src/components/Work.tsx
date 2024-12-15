@@ -17,7 +17,7 @@ export default function Work() {
             <div className="flex flex-wrap gap-24">
                 {
                     Array.from({length: 3}, (_:unknown, i: number): ReactElement => (
-                        <ProjectCard key={i + 1} id={i + 1}/>
+                        <ProjectCard key={i} id={i}/>
                     ))
                 }
             </div>

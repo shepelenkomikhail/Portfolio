@@ -19,10 +19,9 @@ export default function About() {
                     <div className="flex flex-col gap-24 md:gap-36">
                         <div>
                             <h1 className="text-titleYellow">about me.</h1>
-                            <p className="text-md md:text-md w-full md:w-3/4 mt-4 mb-4">I am a goal-oriented individual originally from Sumy, Ukraine.
-                                As a CS student at
-                                ELTE University, I am currently pursuing a Bachelor's degree. I have hands-on
-                                experience in front-end and back-end development.
+                            <p className="text-md md:text-md w-full md:w-3/4 mt-4 mb-4">
+                                I am a highly motivated and disciplined individual. Through my ability and understanding of programming in different languages, I am finishing my studies in B.Sc. Computer Science. I have a strong base that allowed me to complete my studies tasks on different technologies.
+                                I have good analytical and communication skills. I can adapt to change easily and have the confidence to take challenges head on. Having been part of multiple sports teams as well as other academic groups containing people from very diverse backgrounds, I am a team player and can function on my own when needed.
                             </p>
                         </div>
 
