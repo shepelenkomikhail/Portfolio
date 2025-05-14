@@ -23,7 +23,7 @@ export default function Introduction() {
                                            transition-transform rounded-lg opacity-90 w-full h-full
                                            group-hover:translate-x-0 group-hover:translate-y-0">
                     </div>
-                    <a href="./CV.pdf" download="Shepelenko_Mykhailo_CV.pdf">
+                    <a href="./CV-Shepelenko-Mykhailo.pdf" download="Shepelenko_Mykhailo_CV.pdf">
                         <button className="absolute w-full h-full border border-[#474306] rounded-lg text-gray-900">
                             <span className="relative z-10 text-[#474306]">Resume</span>
                         </button>
