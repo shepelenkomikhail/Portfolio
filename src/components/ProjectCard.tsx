@@ -23,12 +23,14 @@ export default function ProjectCard(id: ProjectCardProps) {
                 </div>
                 <p className="text-md lg:text-lg text-center lg:text-start">{project.description}</p>
                 <div className="flex justify-between w-8/12 lg:w-1/3">
-                    <a className="flex" href={project.github} target={"_blank"}>
-                        <span className="hover:underline">GitHub</span>
-                        <div className="translate-x-1 -translate-y-1 w-4">
-                            <img src={LinkIcon} alt="link"/>
-                        </div>
-                    </a>
+                    { project.github && (
+                        <a className="flex" href={project.github} target={"_blank"}>
+                            <span className="hover:underline">GitHub</span>
+                            <div className="translate-x-1 -translate-y-1 w-4">
+                                <img src={LinkIcon} alt="link"/>
+                            </div>
+                        </a>
+                    )}
                     { project.projectLink &&
                         <a className="flex" href={project.projectLink} target={"_blank"}>
                             <span className="hover:underline">Project</span>

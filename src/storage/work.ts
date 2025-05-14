@@ -2,11 +2,11 @@ import { EducationWork } from "./types/Education.ts";
 
 export const Work: EducationWork[] = [
     {
-        period: "March 2023 - March 2024",
-        name: "Megainbox",
-        place: "Remote, Ukraine",
-        title: "Front-End Developer",
-        description: "In this role, I was responsible for designing, developing, and maintaining front-end features for internal administrative functions within the 'Megainbox' mailing service platform. I utilized HTML, CSS, JavaScript, and Bootstrap to create user-friendly interfaces and ensure seamless user experiences. My responsibilities included troubleshooting UI issues, implementing responsive designs, and collaborating with back-end developers to integrate APIs. By focusing on performance and usability, I contributed to enhancing operational efficiency for the team and the platform."
+        period: "February 2025 - May 2025",
+        name: "Ericsson",
+        place: "Budapest, Hungary",
+        title: "Software Engineer Intern",
+        description: "In this role, I was responsible for designing, developing, and maintaining front-end features the 'CodeChecker' opensource service. I utilized VUE, JavaScript, and CSS to implement user-friendly interfaces and ensure seamless user experiences. My responsibilities included troubleshooting UI issues, implementing design solutions, and collaborating with back-end developers to integrate APIs. By focusing on performance and usability, I contributed to enhancing operational efficiency for the team and the platform."
     },
     {
         period: "November 2022 - September 2023",
