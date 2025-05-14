@@ -11,17 +11,21 @@ import java from "../assets/languages/java.svg";
 import maven from "../assets/languages/maven.svg";
 import mysql from "../assets/languages/mysql.svg";
 import chakra from "../assets/languages/chakra.svg";
+import mui from "../assets/languages/mui.svg";
+import mongodb from "../assets/languages/mongodb.svg";
 
 const projects: Project[] = [
     {
         id: 1,
         title: "YPS",
-        description: "A web solution for handling structured and semi-structured internal data in a flexible and collaborative way. The platform allows data processing, role-based access, and efficient file management for organizations.",
+        description: "A customizable web dashboard designed to boost productivity by uniting essential tools like Notes, Calendar, Weather, News, and Chat in one place. Built with responsive UI and real-time features, YPS supports user authentication, drag-and-drop widgets, and dark/light themes.",
         techStack: [
             { name: "TypeScript", path: typescript },
             { name: "React", path: react },
+            { name: "Node.js", path: nodejs },
+            { name: "MongoDB", path: mongodb },
             { name: "Tailwind", path: tailwind },
-            { name: "Node.js", path: nodejs }
+            { name: "MUI", path: mui},
         ],
         img: "./projlogos/yps.png",
         projectLink: "https://yps-front-production.up.railway.app/"
