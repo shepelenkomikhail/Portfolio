@@ -5,7 +5,7 @@ export interface Project {
     title: string;
     techStack: Skill[];
     description: string;
-    github: string;
+    github?: string;
     projectLink?: string;
     img: string;
 }
