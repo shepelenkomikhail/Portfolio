@@ -28,19 +28,22 @@ const projects: Project[] = [
             { name: "MUI", path: mui },
         ],
         img: "./projlogos/yps.png",
+        github: "https://github.com/shepelenkomikhail/YPS-Thesis",
         projectLink: "https://yps-front-production.up.railway.app/"
     },
     {
         id: 2,
-        title: "CREX Group",
-        description: "A responsive landing page showing brand created by myself. The site introduces the CREX ecosystem and services through bold visuals, functional crypto calculator, animated interactions, and clearly structured sections. Project has mobile-first layout design.",
+        title: "Personal Fitness Coach portfolio",
+        description: "Personal portfolio of a fitness coach. The site includes information about the coach, his services, and a form to book a consultation. A user can buy a personal program right here. The application is built using React and TypeScript with responsive design.",
         techStack: [
             { name: "TypeScript", path: typescript },
             { name: "React", path: react },
+            { name: "HTML", path: html },
+            { name: "CSS", path: css },
             { name: "Tailwind", path: tailwind }
         ],
-        img: "./projlogos/crex.png",
-        projectLink: "https://crex-psi.vercel.app/"
+        img: "./projlogos/manko.png",
+        projectLink: "https://maxfitness-eight.vercel.app/"
     },
     {
         id: 3,
@@ -59,17 +62,14 @@ const projects: Project[] = [
     },
     {
         id: 4,
-        title: "Personal Fitness Coach portfolio",
-        description: "Personal portfolio of a fitness coach. The site includes information about the coach, his services, and a form to book a consultation. A user can buy a personal program right here. The application is built using React and TypeScript with responsive design.",
+        title: "Bomberman 2D",
+        description: "Java 2D game built in group of 4 people as an university project. The application is built using pure Java. Multiplayer and competition modes are core functionalities. Players can interact with each other and monster characters and use many kinds of power-ups and curses.",
         techStack: [
-            { name: "TypeScript", path: typescript },
-            { name: "React", path: react },
-            { name: "HTML", path: html },
-            { name: "CSS", path: css },
-            { name: "Tailwind", path: tailwind }
+            { name: "Java", path: java },
+            { name: "Maven", path: maven }
         ],
-        img: "./projlogos/manko.png",
-        projectLink: "https://maxfitness-eight.vercel.app/"
+        img: "./projlogos/bomberman.png",
+        github: "https://github.com/shepelenkomikhail/Boombastic"
     },
     {
         id: 5,
@@ -85,16 +85,18 @@ const projects: Project[] = [
         github: "https://github.com/shepelenkomikhail/IK-1",
         projectLink: "https://ik-1.vercel.app/"
     },
+
     {
         id: 6,
-        title: "Bomberman 2D",
-        description: "Java 2D game built in group of 4 people as an university project. The application is built using pure Java. Multiplayer and competition modes are core functionalities. Players can interact with each other and monster characters and use many kinds of power-ups and curses.",
+        title: "CREX Group",
+        description: "A responsive landing page showing brand created by myself. The site introduces the CREX ecosystem and services through bold visuals, functional crypto calculator, animated interactions, and clearly structured sections. Project has mobile-first layout design.",
         techStack: [
-            { name: "Java", path: java },
-            { name: "Maven", path: maven }
+            { name: "TypeScript", path: typescript },
+            { name: "React", path: react },
+            { name: "Tailwind", path: tailwind }
         ],
-        img: "./projlogos/bomberman.png",
-        github: "https://github.com/shepelenkomikhail/Boombastic"
+        img: "./projlogos/crex.png",
+        projectLink: "https://crex-psi.vercel.app/"
     },
     {
         id: 7,
