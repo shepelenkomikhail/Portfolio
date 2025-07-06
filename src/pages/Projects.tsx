@@ -16,7 +16,7 @@ export default function Projects() {
                         </div>
                         <div className="flex flex-wrap gap-20 lg:gap-24">
                             {
-                                Array.from({length: 7}, (_: unknown, i: number): ReactElement => (
+                                Array.from({length: 11}, (_: unknown, i: number): ReactElement => (
                                     <ProjectCard key={i} id={i}/>
                                 ))
                             }
