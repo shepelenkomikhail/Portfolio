@@ -44,7 +44,8 @@ const projects: Project[] = [
             { name: "Tailwind", path: tailwind }
         ],
         img: "./projlogos/manko.png",
-        projectLink: "https://maxfitness-eight.vercel.app/"
+        projectLink: "https://maxfitness-eight.vercel.app/",
+        github: "https://github.com/shepelenkomikhail/PersonalCoach"
     },
     {
         id: 3,
