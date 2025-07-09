@@ -7,12 +7,14 @@ import nodejs from "../assets/languages/nodejs.svg";
 import git from "../assets/languages/git.svg";
 import figma from "../assets/languages/figma.svg";
 import {Skill} from "./types/Skill.ts";
+import csharp from "../assets/languages/csharp.svg";
 
 export const mainSkills: Skill[] = [
     { name: "javascript", path: javascript },
     { name: "typescript", path: typescript },
     { name: "react", path: react },
     { name: "java", path: java },
+    { name: 'C#', path: csharp},
     { name: "python", path: python },
     { name: "nodejs", path: nodejs },
     { name: "git", path: git },

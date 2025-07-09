@@ -1,5 +1,4 @@
 import php from "../assets/languages/php.svg";
-import csharp from "../assets/languages/csharp.svg";
 import cpp from "../assets/languages/cpp.svg";
 import mongodb from "../assets/languages/mongodb.svg";
 import bootstrap from "../assets/languages/bootstrap.svg";
@@ -10,7 +9,6 @@ import { Skill } from "./types/Skill.ts";
 
 export const sideSkills: Skill[] = [
     { name: "php", path: php },
-    { name: "csharp", path: csharp },
     { name: "cpp", path: cpp },
     { name: "mongodb", path: mongodb },
     { name: "bootstrap", path: bootstrap },

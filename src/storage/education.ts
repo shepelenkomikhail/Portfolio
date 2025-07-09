@@ -2,11 +2,11 @@ import {EducationWork} from "./types/Education.ts";
 
 export const Education: EducationWork[] = [
     {
-        period: "2022-2025 (expected)",
+        period: "2022-2025",
         name: "Eötvös Loránd University",
         place: "Budapest, Hungary",
         title: "Bachelor in Computer Science",
-        description: "While pursuing my degree, I am continually growing both as a programmer and as an individual. University provides me with opportunities to interact with people from diverse countries, helping me understand their cultures and perspectives. I am also gaining essential computer science knowledge in areas such as Advanced Mathematics, Probability and Statistics, Algorithms and Data Structures, Object-Oriented Programming, Concurrent, Imperative, and Functional Programming, Programming and Computation Theory, Telecommunications, Artificial Intelligence, Machine Learning, and Web Development."
+        description: "While pursuing my degree, I was continually growing both as a programmer and as an individual. University provided me with opportunities to interact with people from diverse countries, helping me understand their cultures and perspectives. I was also gaining essential computer science knowledge in areas such as Advanced Mathematics, Probability and Statistics, Algorithms and Data Structures, Object-Oriented Programming, Concurrent, Imperative, and Functional Programming, Programming and Computation Theory, Telecommunications, Artificial Intelligence, Machine Learning, and Web Development."
     },
     {
         period: "2017-2022",
