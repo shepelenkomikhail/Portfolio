@@ -14,6 +14,12 @@ import chakra from "../assets/languages/chakra.svg";
 import mui from "../assets/languages/mui.svg";
 import mongodb from "../assets/languages/mongodb.svg";
 import openai from "../assets/languages/openai.svg";
+import csharp from "../assets/languages/csharp.svg"
+import sqlite from "../assets/languages/sqlite.svg"
+import dotnet from "../assets/languages/dotnet.svg"
+import asp from "../assets/languages/asp.svg"
+import efcore from "../assets/languages/efcore.svg"
+import razor from "../assets/languages/razor.svg"
 
 const projects: Project[] = [
     {
@@ -25,7 +31,7 @@ const projects: Project[] = [
             { name: "React", path: react },
             { name: "Node.js", path: nodejs },
             { name: "MongoDB", path: mongodb },
-            { name: "Tailwind", path: tailwind },
+            { name: "Tailwind", path: tailwind },  
             { name: "MUI", path: mui },
         ],
         img: "./projlogos/yps.png",
@@ -34,6 +40,21 @@ const projects: Project[] = [
     },
     {
         id: 2,
+        title: "Education Portal",
+        description: "A full-stack learning management system architected with clean N-layer architecture. Implemented secure user authentication with ASP.NET Core Identity, role-based authorization, and data protection. Developed a robust data access layer using Repository and Unit of Work patterns with comprehensive unit testing.",
+        techStack: [
+            { name: "C#", path: csharp },
+            { name: ".NET 8", path: dotnet },
+            { name: "ASP.NET", path: asp },
+            { name: "Entity Framework Core", path: efcore },
+            { name: "SQLite", path: sqlite },
+            { name: "Razor Pages", path: razor }
+        ],
+        img: "./projlogos/eduportal.png",
+        github: "https://github.com/shepelenkomikhail/Education-Portal"
+    },
+    {
+        id: 3,
         title: "Personal Fitness Coach portfolio",
         description: "Personal portfolio of a fitness coach. The site includes information about the coach, his services, and a form to book a consultation. A user can buy a personal program right here. The application is built using React and TypeScript with responsive design.",
         techStack: [
@@ -48,7 +69,7 @@ const projects: Project[] = [
         github: "https://github.com/shepelenkomikhail/PersonalCoach"
     },
     {
-        id: 3,
+        id: 4,
         title: "Job Portal",
         description: "A dashboard for job portal. The functionality includes filtering, searching, and sorting available jobs; saving and applying for the vacancy; checking detailed job description.",
         techStack: [
@@ -63,7 +84,7 @@ const projects: Project[] = [
         projectLink: "https://job-portal-one-blush.vercel.app/"
     },
     {
-        id: 4,
+        id: 5,
         title: "Bomberman 2D",
         description: "Java 2D game built in group of 4 people as an university project. The application is built using pure Java. Multiplayer and competition modes are core functionalities. Players can interact with each other and monster characters and use many kinds of power-ups and curses.",
         techStack: [
@@ -74,7 +95,7 @@ const projects: Project[] = [
         github: "https://github.com/shepelenkomikhail/Boombastic"
     },
     {
-        id: 5,
+        id: 6,
         title: "2D Board game",
         description: "A JS game built as a university project. A user can move the character across the board, dig the cells, and find some lost details. Besides, there is multiplayer included and limited moving steps.",
         techStack: [
@@ -88,7 +109,7 @@ const projects: Project[] = [
         projectLink: "https://ik-1.vercel.app/"
     },
     {
-        id: 6,
+        id: 7,
         title: 'AI Translator',
         description: "AI Translator is a Google Chrome extension that leverages artificial intelligence for text translation. The app supports multiple languages, provides transcription of the translated text, and returns results in a convenient JSON format. It features a modern, responsive UI and integrates OpenAI API for accurate and fast translations.",
         techStack: [
@@ -104,7 +125,7 @@ const projects: Project[] = [
         projectLink: "https://ai-translator-depl.vercel.app/"
     },
     {
-        id: 7,
+        id: 8,
         title: "CREX Group",
         description: "A responsive landing page showing brand created by myself. The site introduces the CREX ecosystem and services through bold visuals, functional crypto calculator, animated interactions, and clearly structured sections. Project has mobile-first layout design.",
         techStack: [
@@ -116,7 +137,7 @@ const projects: Project[] = [
         projectLink: "https://crex-psi.vercel.app/"
     },
     {
-        id: 8,
+        id: 9,
         title: "Car rental app",
         description: "An application built as a catalog of cars available to rent within the company. A user can book a car, fill a form which calculates the price, check the car description, and search for a specific one.",
         techStack: [
@@ -132,7 +153,7 @@ const projects: Project[] = [
         projectLink: "https://shepelenkomikhail.github.io/udemx-test/"
     },
     {
-        id: 9,
+        id: 10,
         title: "Rick&Morty library",
         description: "This project is UI visualisation of all characters of Rick&Morty series. Data is taken from their official API.",
         techStack: [
@@ -146,7 +167,7 @@ const projects: Project[] = [
         projectLink: "https://shepelenkomikhail.github.io/RickMorty/"
     },
     {
-        id: 10,
+        id: 11,
         title: "Snake game",
         description: "Java 2D game built as an university project. The application gives opportunity to choose their names and color of the snakes. There is a database integrated and table shows top players of all times.",
         techStack: [
@@ -157,7 +178,7 @@ const projects: Project[] = [
         github: "https://github.com/shepelenkomikhail/Tron-Game"
     },
     {
-        id: 11,
+        id: 12,
         title: "Pebble game",
         description: "Java 2D game built as an university project. The application gives opportunity to choose the board size for players. Users play against each other until no more 'pebbles' left.",
         techStack: [
