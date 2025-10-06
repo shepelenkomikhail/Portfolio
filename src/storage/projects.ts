@@ -18,8 +18,6 @@ import csharp from "../assets/languages/csharp.svg"
 import sqlite from "../assets/languages/sqlite.svg"
 import dotnet from "../assets/languages/dotnet.svg"
 import asp from "../assets/languages/asp.svg"
-import efcore from "../assets/languages/efcore.svg"
-import razor from "../assets/languages/razor.svg"
 
 const projects: Project[] = [
     {
@@ -46,11 +44,9 @@ const projects: Project[] = [
             { name: "C#", path: csharp },
             { name: ".NET 8", path: dotnet },
             { name: "ASP.NET", path: asp },
-            { name: "Entity Framework Core", path: efcore },
             { name: "SQLite", path: sqlite },
-            { name: "Razor Pages", path: razor }
         ],
-        img: "./projlogos/eduportal.png",
+        img: "./projlogos/education.png",
         github: "https://github.com/shepelenkomikhail/Education-Portal"
     },
     {
