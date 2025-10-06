@@ -6,7 +6,7 @@ import tailwind from "../assets/languages/tailwind.svg";
 import chakra from "../assets/languages/chakra.svg";
 import oraclesql from "../assets/languages/oraclesql.svg";
 import figma from "../assets/languages/figma.svg"
-import sql from "../assets/languages/sql.svg"
+import sql from "../assets/languages/sqlite.svg"
 import mui from "../assets/languages/mui.svg"
 import { Skill } from "./types/Skill.ts";
 
