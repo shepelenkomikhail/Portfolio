@@ -7,6 +7,7 @@ import sideSkills from "../storage/sideSkills.ts";
 import languageSkills from "../storage/languageSkills.ts";
 import education from "../storage/education.ts";
 import work from "../storage/work.ts";
+import certificates from "../storage/certificates.ts";
 import {EducationWork} from "../storage/types/Education.ts";
 import {LangSkill} from "../storage/types/LangSkill.ts";
 
@@ -93,6 +94,28 @@ export default function About() {
                                             <div className="flex flex-col gap-3 md:gap-1">
                                                 <p className="text-xl md:text-2xl font-medium">{work.title}</p>
                                                 <p className="text-[15px] md:text-md">{work.description}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/*Work Experience*/}
+                        <div className="flex flex-col">
+                            <h3 className="text-3xl mb-8">Certificates</h3>
+                            <div className="flex flex-col gap-8">
+                                {certificates.map((cert: EducationWork, index:number): React.ReactElement => (
+                                    <div className="flex gap-4" key={index}>
+                                        <p className="text-4xl md:text-5xl">•</p>
+                                        <div className="flex flex-col gap-4 mt-2 md:mt-2.5">
+                                            <div className="flex flex-col gap-3 md:gap-1">
+                                                <p className="text-md md:text-md font-semibold">{cert.period}</p>
+                                                <p className="text-2xl md:text-3xl font-semibold">{cert.name} - {cert.place}</p>
+                                            </div>
+                                            <div className="flex flex-col gap-3 md:gap-1">
+                                                <p className="text-xl md:text-2xl font-medium">{cert.title}</p>
+                                                <p className="text-[15px] md:text-md">{cert.description}</p>
                                             </div>
                                         </div>
                                     </div>
