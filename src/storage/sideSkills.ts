@@ -5,6 +5,9 @@ import bootstrap from "../assets/languages/bootstrap.svg";
 import tailwind from "../assets/languages/tailwind.svg";
 import chakra from "../assets/languages/chakra.svg";
 import oraclesql from "../assets/languages/oraclesql.svg";
+import figma from "../assets/languages/figma.svg"
+import sql from "../assets/languages/sql.svg"
+import mui from "../assets/languages/mui.svg"
 import { Skill } from "./types/Skill.ts";
 
 export const sideSkills: Skill[] = [
@@ -14,7 +17,10 @@ export const sideSkills: Skill[] = [
     { name: "bootstrap", path: bootstrap },
     { name: "tailwind", path: tailwind },
     { name: "chakra", path: chakra },
-    { name: "oraclesql", path: oraclesql }
+    { name: "oraclesql", path: oraclesql },
+    { name: "sql", path: sql },
+    { name: "mui", path: mui },
+    { name: "figma", path: figma }
 ];
 
 export default sideSkills;
