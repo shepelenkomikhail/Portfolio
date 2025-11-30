@@ -104,7 +104,7 @@ const projects: Project[] = [
         projectLink: "https://mz-odtahova-sluzba.com/"
     },
     {
-        id: 6,
+        id: 7,
         title: "2D Board game",
         description: "A JS game built as a university project. A user can move the character across the board, dig the cells, and find some lost details. Besides, there is multiplayer included and limited moving steps.",
         techStack: [
@@ -118,7 +118,7 @@ const projects: Project[] = [
         projectLink: "https://ik-1.vercel.app/"
     },
     {
-        id: 7,
+        id: 8,
         title: 'AI Translator',
         description: "AI Translator is a Google Chrome extension that leverages artificial intelligence for text translation. The app supports multiple languages, provides transcription of the translated text, and returns results in a convenient JSON format. It features a modern, responsive UI and integrates OpenAI API for accurate and fast translations.",
         techStack: [
@@ -134,7 +134,7 @@ const projects: Project[] = [
         projectLink: "https://ai-translator-depl.vercel.app/"
     },
     {
-        id: 8,
+        id: 9,
         title: "CREX Group",
         description: "A responsive landing page showing brand created by myself. The site introduces the CREX ecosystem and services through bold visuals, functional crypto calculator, animated interactions, and clearly structured sections. Project has mobile-first layout design.",
         techStack: [
@@ -146,7 +146,7 @@ const projects: Project[] = [
         projectLink: "https://crex-psi.vercel.app/"
     },
     {
-        id: 9,
+        id: 10,
         title: "Car rental app",
         description: "An application built as a catalog of cars available to rent within the company. A user can book a car, fill a form which calculates the price, check the car description, and search for a specific one.",
         techStack: [
@@ -162,7 +162,7 @@ const projects: Project[] = [
         projectLink: "https://shepelenkomikhail.github.io/udemx-test/"
     },
     {
-        id: 10,
+        id: 11,
         title: "Rick&Morty library",
         description: "This project is UI visualisation of all characters of Rick&Morty series. Data is taken from their official API.",
         techStack: [
@@ -176,7 +176,7 @@ const projects: Project[] = [
         projectLink: "https://shepelenkomikhail.github.io/RickMorty/"
     },
     {
-        id: 11,
+        id: 12,
         title: "Snake game",
         description: "Java 2D game built as an university project. The application gives opportunity to choose their names and color of the snakes. There is a database integrated and table shows top players of all times.",
         techStack: [
@@ -187,7 +187,7 @@ const projects: Project[] = [
         github: "https://github.com/shepelenkomikhail/Tron-Game"
     },
     {
-        id: 12,
+        id: 13,
         title: "Pebble game",
         description: "Java 2D game built as an university project. The application gives opportunity to choose the board size for players. Users play against each other until no more 'pebbles' left.",
         techStack: [
