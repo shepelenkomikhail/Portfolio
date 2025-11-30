@@ -21,8 +21,11 @@ export default function About() {
                         <div>
                             <h1 className="text-titleYellow">about me.</h1>
                             <p className="text-md md:text-md w-full md:w-3/4 mt-4 mb-4">
-                                I am a highly motivated and disciplined individual. Through my ability and understanding of programming in different languages, I am finishing my studies in B.Sc. Computer Science. I have a strong base that allowed me to complete my studies tasks on different technologies.
-                                I have good analytical and communication skills. I can adapt to change easily and have the confidence to take challenges head on. Having been part of multiple sports teams as well as other academic groups containing people from very diverse backgrounds, I am a team player and can function on my own when needed.
+                                I’m Mykhailo Shepelenko, a Full-Stack Software Developer specializing in .NET, C#, React, TypeScript, and modern cloud-native architectures.
+                                I build clean, scalable, and maintainable applications with a strong focus on performance, domain-driven structure, and real-world usability.
+                                I have a BSc in Computer Science and several years of experience working with multi-layer enterprise systems, distributed services, and modern web applications. My daily stack includes ASP.NET Core, EF Core, PostgreSQL, React 19, Redux Toolkit Query, Tailwind, Docker/Podman, AWS, and CI/CD practices.
+                                Beyond professional work, I actively develop side-projects — from full product-level systems to personal tools — constantly expanding my engineering depth in backend design, frontend architecture, cloud hosting, and DevOps automation.
+                                Outside of tech, I’m passionate about fitness, strength training, and football, and I enjoy building structured learning systems to grow consistently both in engineering and in life.
                             </p>
                         </div>
 

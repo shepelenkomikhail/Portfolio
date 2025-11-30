@@ -9,10 +9,8 @@ export default function AboutMe() {
     return (
         <div className="flex flex-col gap-10">
             <h1 className="text-titleYellow">about me.</h1>
-            <p className="text-md lg:text-lg w-full lg:w-8/12 lg:-mt-8">I am a goal-oriented individual originally from Sumy, Ukraine. As a CS
-                student
-                at ELTE University, I am currently pursuing a Bachelor's degree. I have hands-on experience in front
-                -end and back-end development.
+            <p className="text-md lg:text-lg w-full lg:w-8/12 lg:-mt-8">
+                I’m a Full-Stack Developer working with .NET, C#, React, and TypeScript. I build scalable web applications, clean APIs, and modern frontend interfaces. I focus on quality, performance, and maintainable engineering. Always learning, always building.
             </p>
             <div className="flex flex-col gap-10 mt-6">
                 <h3 className="text-2xl lg:text-3xl">Main Skills</h3>

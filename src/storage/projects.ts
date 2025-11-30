@@ -92,6 +92,19 @@ const projects: Project[] = [
     },
     {
         id: 6,
+        title: "ODŤAHOVÁ SLUŽBA Landing",
+        description: "A fully designed and developed landing page for a towing service company. I created the complete UI/UX design, built the website from scratch with responsive layout, and deployed it to production. The project includes a light CI/CD setup for automatic deployments and optimized asset delivery. Additionally, I configured Google Ads brand-focused advertising to increase visibility and customer reach.",
+        techStack: [
+            { name: "HTML", path: html },
+            { name: "CSS", path: css },
+            { name: "JS", path: javascript },
+            { name: "TailwindCSS", path: tailwind }
+        ],
+        img: "./projlogos/evacuator.png",
+        projectLink: "https://mz-odtahova-sluzba.com/"
+    },
+    {
+        id: 6,
         title: "2D Board game",
         description: "A JS game built as a university project. A user can move the character across the board, dig the cells, and find some lost details. Besides, there is multiplayer included and limited moving steps.",
         techStack: [
