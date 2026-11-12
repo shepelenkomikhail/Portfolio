@@ -87,7 +87,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   overflow-x: clip;
-  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 /* Soft colour wash behind everything, above the page background, below the fireflies */
@@ -261,4 +260,17 @@ body::before {
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: contain;
   -webkit-mask-position: left center;
+}
+
+/* Theme switch: everything changes in one frame (see lib/useTheme), then a short cross-fade */
+.theme-switching,
+.theme-switching *,
+.theme-switching *::before,
+.theme-switching *::after {
+  transition: none !important;
+}
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.35s;
+  animation-timing-function: ease;
 }

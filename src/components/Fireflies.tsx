@@ -43,6 +43,15 @@ function makeSprite(rgb: string, size = 64): HTMLCanvasElement {
 
 export default function Fireflies({ theme }: { theme: 'dark' | 'light' }) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
+  const themeRef = useRef(theme)
+  // Set by the animation effect; swaps colours without restarting the simulation
+  const applyThemeRef = useRef<(() => void) | null>(null)
+
+  // Theme changes only recolour the fireflies — the loop and their positions keep running
+  useEffect(() => {
+    themeRef.current = theme
+    applyThemeRef.current?.()
+  }, [theme])
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -50,17 +59,24 @@ export default function Fireflies({ theme }: { theme: 'dark' | 'light' }) {
     const ctx = canvas.getContext('2d')
     if (!ctx) return
 
-    // Same values as --glow / --glow-2 in index.css. Taken from the prop rather than computed styles,
-    // because this effect runs before the parent has written the new data-theme attribute.
-    const isLight = theme === 'light'
-    const sprite = makeSprite(isLight ? '214, 150, 40' : '245, 198, 107')
-    const sprite2 = makeSprite(isLight ? '56, 140, 190' : '125, 211, 252')
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     const touch = window.matchMedia('(pointer: coarse)').matches
     const FRAME_MS = 1000 / (touch ? 30 : 40)
     const MAX_FLIES = touch ? 26 : 64
-    // 'lighter' (additive) blending looks best on dark, but is slow in mobile Safari
-    const composite: GlobalCompositeOperation = isLight || touch ? 'source-over' : 'lighter'
+
+    // Same values as --glow / --glow-2 in index.css
+    let isLight = false
+    let sprite: HTMLCanvasElement
+    let sprite2: HTMLCanvasElement
+    let composite: GlobalCompositeOperation = 'source-over'
+    const applyTheme = () => {
+      isLight = themeRef.current === 'light'
+      sprite = makeSprite(isLight ? '214, 150, 40' : '245, 198, 107')
+      sprite2 = makeSprite(isLight ? '56, 140, 190' : '125, 211, 252')
+      // 'lighter' (additive) blending looks best on dark, but is slow in mobile Safari
+      composite = isLight || touch ? 'source-over' : 'lighter'
+    }
+    applyTheme()
 
     let width = 0
     let height = 0
@@ -83,7 +99,7 @@ export default function Fireflies({ theme }: { theme: 'dark' | 'light' }) {
       const dpr = touch ? 1 : Math.min(window.devicePixelRatio || 1, 1.5)
       // On phones use the largest viewport height (toolbar hidden) so scrolling never changes the canvas size
       const h = touch ? Math.max(window.innerHeight, document.documentElement.clientHeight, window.screen.height) : window.innerHeight
-      if (canvas.width === Math.round(window.innerWidth * dpr) && canvas.height === Math.round(h * dpr)) return
+      if (flies.length && canvas.width === Math.round(window.innerWidth * dpr) && canvas.height === Math.round(h * dpr)) return
       width = window.innerWidth
       height = h
       canvas.style.height = `${h}px`
@@ -190,6 +206,10 @@ export default function Fireflies({ theme }: { theme: 'dark' | 'light' }) {
     resize()
     draw(performance.now())
     start()
+    applyThemeRef.current = () => {
+      applyTheme()
+      draw(performance.now()) // recolour immediately (also covers reduced motion, where nothing loops)
+    }
 
     window.addEventListener('resize', onResize)
     document.addEventListener('visibilitychange', onVisibility)
@@ -198,6 +218,7 @@ export default function Fireflies({ theme }: { theme: 'dark' | 'light' }) {
     document.documentElement.addEventListener('pointerleave', onLeave)
 
     return () => {
+      applyThemeRef.current = null
       stop()
       window.clearTimeout(resizeTimer)
       window.removeEventListener('resize', onResize)
@@ -206,7 +227,7 @@ export default function Fireflies({ theme }: { theme: 'dark' | 'light' }) {
       window.removeEventListener('scroll', onScroll)
       document.documentElement.removeEventListener('pointerleave', onLeave)
     }
-  }, [theme])
+  }, [])
 
   return <canvas ref={canvasRef} aria-hidden="true" className="pointer-events-none fixed top-0 left-0 z-0 h-full w-full" />
 }
