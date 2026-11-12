@@ -20,4 +20,9 @@ export default defineConfig([
       globals: globals.browser,
     },
   },
+  {
+    // Vercel serverless functions run on Node
+    files: ['api/**/*.ts'],
+    languageOptions: { globals: globals.node },
+  },
 ])

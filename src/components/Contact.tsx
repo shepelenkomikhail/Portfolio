@@ -3,8 +3,6 @@ import { profile } from '../data/profile'
 import Section from './Section'
 import { ArrowUpRight, GitHub, LinkedIn, Mail, Phone, WhatsApp } from './Icons'
 
-// EmailJS identifiers are public by design (the public key only allows sending through this template).
-const EMAILJS = { service: 'service_pvr2o38', template: 'template_nvwgrzd', publicKey: 'XXUk0SDweb88v_cui' }
 
 type Status = { kind: 'idle' } | { kind: 'sending' } | { kind: 'sent' } | { kind: 'error'; message: string }
 
@@ -26,7 +24,7 @@ export default function Contact() {
     e.preventDefault()
     const form = e.currentTarget
     const data = new FormData(form)
-    if (data.get('company')) return // honeypot: bots fill hidden fields
+    if (data.get('company')) return // honeypot: bots fill hidden fields (the server checks it too)
 
     const name = String(data.get('name') ?? '').trim()
     const email = String(data.get('email') ?? '').trim()
@@ -38,12 +36,21 @@ export default function Contact() {
 
     setStatus({ kind: 'sending' })
     try {
-      const { default: emailjs } = await import('@emailjs/browser') // loaded only when someone sends
-      await emailjs.send(EMAILJS.service, EMAILJS.template, { name, email, message }, { publicKey: EMAILJS.publicKey })
+      // Sent by our own serverless function (api/contact.ts) over SMTP
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ name, email, message, company: data.get('company') ?? '' }),
+      })
+      if (!res.ok) {
+        const body = (await res.json().catch(() => ({}))) as { error?: string }
+        throw new Error(body.error)
+      }
       form.reset()
       setStatus({ kind: 'sent' })
-    } catch {
-      setStatus({ kind: 'error', message: `Something went wrong. Please email me directly at ${profile.email}.` })
+    } catch (error) {
+      const reason = error instanceof Error && error.message ? `${error.message} ` : ''
+      setStatus({ kind: 'error', message: `${reason}You can also email me directly at ${profile.email}.` })
     }
   }
 
