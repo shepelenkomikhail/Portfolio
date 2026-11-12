@@ -1,5 +1,5 @@
 import { profile, stats } from '../data/profile'
-import { ArrowDown, Download, GitHub, LinkedIn, MapPin, Telegram } from './Icons'
+import { ArrowDown, Download, GitHub, LinkedIn, MapPin, WhatsApp } from './Icons'
 
 export default function Hero() {
   return (
@@ -26,7 +26,8 @@ export default function Hero() {
           >
             Full-stack developer. I build web products end to end — from the{' '}
             <span className="text-ink">ASP.NET Core</span> API and <span className="text-ink">PostgreSQL</span> schema to the{' '}
-            <span className="text-ink">React</span> interface and the <span className="text-ink">Azure</span> deployment.
+            <span className="text-ink">React</span> interface and the <span className="text-ink">Azure</span> deployment — and I’m
+            going deep on <span className="text-accent">AI systems engineering</span>.
           </p>
 
           <div className="reveal mt-8 flex flex-wrap items-center gap-3" style={{ ['--delay' as string]: '240ms' }}>
@@ -52,8 +53,8 @@ export default function Hero() {
             <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" className="transition hover:text-accent" aria-label="LinkedIn">
               <LinkedIn width={20} height={20} />
             </a>
-            <a href={profile.links.telegram} target="_blank" rel="noopener noreferrer" className="transition hover:text-accent" aria-label="Telegram">
-              <Telegram width={20} height={20} />
+            <a href={profile.links.whatsapp} target="_blank" rel="noopener noreferrer" className="transition hover:text-accent" aria-label="WhatsApp">
+              <WhatsApp width={20} height={20} />
             </a>
           </div>
         </div>

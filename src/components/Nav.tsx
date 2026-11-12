@@ -39,8 +39,10 @@ export default function Nav({ theme, onToggleTheme }: { theme: Theme; onToggleTh
     >
       <nav className="container-x flex h-16 items-center justify-between" aria-label="Main">
         <a href="#top" className="group flex items-center gap-2.5 font-display font-semibold" onClick={() => setOpen(false)}>
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-accent text-sm text-accent-ink transition group-hover:rotate-[-6deg]">
-            MS
+          <span className="logo-mark relative inline-flex h-8 items-center gap-1 overflow-hidden rounded-lg px-2.5 font-mono text-sm">
+            <span className="text-accent transition-transform duration-300 group-hover:translate-x-0.5">❯</span>
+            <span className="text-ink">ms</span>
+            <span className="h-[1.05em] w-[7px] translate-y-px animate-[blink_1.1s_steps(1)_infinite] bg-accent" aria-hidden="true" />
           </span>
           <span className="hidden sm:inline">{profile.name}</span>
         </a>

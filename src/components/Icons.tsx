@@ -80,6 +80,32 @@ export const Check = (p: IconProps) => (
   </svg>
 )
 
+export const Compass = (p: IconProps) => (
+  <svg {...stroke(p)}>
+    <circle cx="12" cy="12" r="9" />
+    <path d="m15.5 8.5-2 5-5 2 2-5 5-2Z" />
+  </svg>
+)
+export const Sparkles = (p: IconProps) => (
+  <svg {...stroke(p)}>
+    <path d="M10 3.5 11.6 8a2 2 0 0 0 1.3 1.3L17.5 11l-4.6 1.6a2 2 0 0 0-1.3 1.3L10 18.5l-1.6-4.6a2 2 0 0 0-1.3-1.3L2.5 11l4.6-1.6A2 2 0 0 0 8.4 8L10 3.5Z" />
+    <path d="M18 3v4M16 5h4M19 16v3M17.5 17.5h3" />
+  </svg>
+)
+export const Scales = (p: IconProps) => (
+  <svg {...stroke(p)}>
+    <path d="M12 3v18M7 21h10M5 7h14M12 5l-7 2M12 5l7 2" />
+    <path d="m5 7-3 7a3.5 3.5 0 0 0 6 0L5 7ZM19 7l-3 7a3.5 3.5 0 0 0 6 0l-3-7Z" />
+  </svg>
+)
+
+export const Trophy = (p: IconProps) => (
+  <svg {...stroke(p)}>
+    <path d="M8 4h8v5a4 4 0 0 1-8 0V4Z" />
+    <path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8.5 20h7M10 17h4" />
+  </svg>
+)
+
 const solid = (props: IconProps) => ({
   width: 18,
   height: 18,
@@ -97,6 +123,12 @@ export const GitHub = (p: IconProps) => (
 export const LinkedIn = (p: IconProps) => (
   <svg {...solid(p)}>
     <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z" />
+  </svg>
+)
+export const WhatsApp = (p: IconProps) => (
+  <svg {...stroke(p)}>
+    <path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4l-4.5 1.1Z" />
+    <path d="M9 8.5c0 3.3 3.2 6.5 6.5 6.5l1-1.6-2-1-1 .8a5 5 0 0 1-2.2-2.2l.8-1-1-2L9.5 8Z" />
   </svg>
 )
 export const Telegram = (p: IconProps) => (

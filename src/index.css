@@ -213,3 +213,38 @@ body::before {
   .reveal { opacity: 1; transform: none; transition: none; }
   .text-glow, .photo-ring, .pulse-dot { animation: none; }
 }
+
+/* Nav logo: dark "terminal" chip with a slowly rotating gradient edge */
+.logo-mark {
+  background: var(--surface-2);
+  isolation: isolate;
+}
+.logo-mark::before {
+  content: "";
+  position: absolute;
+  inset: -150%;
+  z-index: -2;
+  background: conic-gradient(from 0deg, rgba(var(--glow), 0.9), rgba(var(--glow-2), 0.8), transparent 35%, rgba(var(--glow), 0.9));
+  animation: spin 6s linear infinite;
+}
+.logo-mark::after {
+  content: "";
+  position: absolute;
+  inset: 1.5px;
+  z-index: -1;
+  border-radius: 0.4rem;
+  background: var(--surface-2);
+}
+@media (prefers-reduced-motion: reduce) {
+  .logo-mark::before { animation: none; }
+}
+
+/* Event wordmarks are white SVGs; used as a mask so they follow the theme colour */
+.start-wordmark {
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: left center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: left center;
+}

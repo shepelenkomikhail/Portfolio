@@ -72,27 +72,6 @@ export const projects: Project[] = [
     kind: 'Full-stack',
   },
   {
-    slug: 'education-portal',
-    title: 'Education Portal',
-    tagline: 'Learning management system',
-    description:
-      'Courses with books, videos and articles, enrolment, progress tracking and skills earned on completion. Clean N-layer architecture with Repository and Unit of Work, role-based access and unit tests.',
-    stack: ['.NET 8', 'ASP.NET Core MVC', 'EF Core', 'Identity', 'SQLite', 'Razor'],
-    image: '/projlogos/education.png',
-    github: 'https://github.com/shepelenkomikhail/Education-Portal',
-    kind: 'Backend',
-  },
-  {
-    slug: 'task-manager',
-    title: 'Task Manager',
-    tagline: '.NET Web API + React',
-    description:
-      'Task CRUD over a .NET 8 REST API with an RTK Query client, validated forms, dark/light theme, lazy-loaded routes and error boundaries.',
-    stack: ['.NET 8', 'Web API', 'React', 'TypeScript', 'RTK Query', 'React Hook Form', 'MUI'],
-    github: 'https://github.com/shepelenkomikhail/TaskManager',
-    kind: 'Full-stack',
-  },
-  {
     slug: 'ai-translator',
     title: 'AI Translator',
     tagline: 'Chrome extension',
@@ -116,6 +95,27 @@ export const projects: Project[] = [
     kind: 'Client work',
   },
   {
+    slug: 'education-portal',
+    title: 'Education Portal',
+    tagline: 'Learning management system',
+    description:
+      'Courses with books, videos and articles, enrolment, progress tracking and skills earned on completion. Clean N-layer architecture with Repository and Unit of Work, role-based access and unit tests.',
+    stack: ['.NET 8', 'ASP.NET Core MVC', 'EF Core', 'Identity', 'SQLite', 'Razor'],
+    image: '/projlogos/education.png',
+    github: 'https://github.com/shepelenkomikhail/Education-Portal',
+    kind: 'Backend',
+  },
+  {
+    slug: 'task-manager',
+    title: 'Task Manager',
+    tagline: '.NET Web API + React',
+    description:
+      'Task CRUD over a .NET 8 REST API with an RTK Query client, validated forms, dark/light theme, lazy-loaded routes and error boundaries.',
+    stack: ['.NET 8', 'Web API', 'React', 'TypeScript', 'RTK Query', 'React Hook Form', 'MUI'],
+    github: 'https://github.com/shepelenkomikhail/TaskManager',
+    kind: 'Full-stack',
+  },
+  {
     slug: 'notes-agent',
     title: 'Notes Agent',
     tagline: 'AI analysis of Apple Notes',
@@ -124,16 +124,6 @@ export const projects: Project[] = [
     stack: ['Node.js', 'JavaScript', 'SQLite', 'OpenAI API'],
     github: 'https://github.com/shepelenkomikhail/NotesAgent',
     kind: 'AI',
-  },
-  {
-    slug: 'crex',
-    title: 'CREX Group',
-    tagline: 'Brand landing with a crypto calculator',
-    description: 'Mobile-first landing page for a brand I created: bold visuals, animated sections and a working crypto calculator.',
-    stack: ['React', 'TypeScript', 'Tailwind'],
-    image: '/projects/crex.webp',
-    live: 'https://crex-psi.vercel.app/',
-    kind: 'Frontend',
   },
   {
     slug: 'fitness',

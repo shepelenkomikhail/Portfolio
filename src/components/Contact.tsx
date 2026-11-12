@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import { profile } from '../data/profile'
 import Section from './Section'
-import { ArrowUpRight, GitHub, LinkedIn, Mail, Phone, Telegram } from './Icons'
+import { ArrowUpRight, GitHub, LinkedIn, Mail, Phone, WhatsApp } from './Icons'
 
 // EmailJS identifiers are public by design (the public key only allows sending through this template).
 const EMAILJS = { service: 'service_pvr2o38', template: 'template_nvwgrzd', publicKey: 'XXUk0SDweb88v_cui' }
@@ -13,7 +13,7 @@ const channels = [
   { icon: Phone, label: 'Phone', value: profile.phone, href: profile.phoneHref },
   { icon: LinkedIn, label: 'LinkedIn', value: 'in/shepelenkomykhailo', href: profile.links.linkedin },
   { icon: GitHub, label: 'GitHub', value: 'shepelenkomikhail', href: profile.links.github },
-  { icon: Telegram, label: 'Telegram', value: '@shepelenkom', href: profile.links.telegram },
+  { icon: WhatsApp, label: 'WhatsApp', value: profile.phone, href: profile.links.whatsapp },
 ]
 
 const inputClass =

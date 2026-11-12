@@ -11,15 +11,15 @@ export const profile = {
   links: {
     github: 'https://github.com/shepelenkomikhail',
     linkedin: 'https://www.linkedin.com/in/shepelenkomykhailo/',
-    telegram: 'https://t.me/shepelenkom',
+    whatsapp: 'https://wa.me/36204257511',
   },
 } as const
 
 export const stats = [
   { value: '1 yr', label: 'commercial .NET at NIX' },
-  { value: '240', label: 'automated tests in my latest product' },
-  { value: '4', label: 'languages shipped in one storefront' },
-  { value: '30+', label: 'public repositories on GitHub' },
+  { value: '3', label: 'AI-powered apps shipped (OpenAI, Gemini)' },
+  { value: 'Daily', label: 'AI agents in my engineering workflow' },
+  { value: 'E2E', label: 'products built solo, from schema to cloud' },
 ] as const
 
 export interface SkillGroup {
@@ -45,8 +45,19 @@ export const skills: SkillGroup[] = [
     items: ['Azure App Service', 'Azure PostgreSQL', 'Blob Storage', 'Application Insights', 'Docker', 'GitHub Actions', 'Vercel', 'Git', 'Figma'],
   },
   {
+    title: 'AI engineering',
+    items: [
+      'OpenAI API',
+      'Gemini API',
+      'Structured outputs',
+      'Prompt & context design',
+      'Agentic coding (Claude Code)',
+      'Learning: RAG, evals, MCP',
+    ],
+  },
+  {
     title: 'Also',
-    items: ['Java', 'Python', 'PHP', 'C', 'OpenAI API', 'Gemini API'],
+    items: ['Java', 'Python', 'PHP', 'C'],
   },
 ]
 

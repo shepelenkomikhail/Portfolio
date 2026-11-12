@@ -9,6 +9,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 interface Snippet {
   file: string
   lang: 'csharp' | 'ts'
+  label: string
   code: string
 }
 
@@ -16,6 +17,7 @@ const snippets: Snippet[] = [
   {
     file: 'OrderEndpoints.cs',
     lang: 'csharp',
+    label: 'C# · ASP.NET Core',
     code: `app.MapPost("/api/orders", async (
     CreateOrderRequest request,
     OrderService orders,
@@ -27,8 +29,24 @@ const snippets: Snippet[] = [
 });`,
   },
   {
+    file: 'analyzeNotes.ts',
+    lang: 'ts',
+    label: 'TypeScript · OpenAI API',
+    code: `export async function analyze(notes: string[]) {
+  const res = await openai.responses.create({
+    model: MODEL,
+    instructions: 'Return themes, actions and risks',
+    input: notes.join(' / '),
+    text: { format: zodTextFormat(Analysis, 'analysis') },
+  })
+  // typed, validated output instead of free text
+  return Analysis.parse(JSON.parse(res.output_text))
+}`,
+  },
+  {
     file: 'DeliveryRules.cs',
     lang: 'csharp',
+    label: 'C# · .NET 10',
     code: `public static bool IsSlotOpen(
     DeliverySlot slot, DateTime now)
 {
@@ -39,6 +57,7 @@ const snippets: Snippet[] = [
   {
     file: 'useCartQuote.ts',
     lang: 'ts',
+    label: 'TypeScript · React 19',
     code: `export function useCartQuote(lines: CartLine[]) {
   return useQuery({
     queryKey: ['quote', lines],
@@ -52,7 +71,7 @@ const snippets: Snippet[] = [
 const KEYWORDS = {
   csharp:
     'public|private|static|async|await|var|return|new|class|record|bool|int|string|void|if|else|true|false|null|using|namespace',
-  ts: 'export|function|return|const|let|await|async|import|from|type|interface|new|true|false|null',
+  ts: 'export|function|return|const|let|await|async|import|from|type|interface|new|true|false|null|string',
 }
 
 type TokenKind = 'plain' | 'comment' | 'string' | 'number' | 'keyword' | 'type' | 'fn'
@@ -196,7 +215,7 @@ export default function CodeTyper() {
       </div>
 
       <div className="flex items-center justify-between border-t border-line px-4 py-1.5 text-[10.5px] text-faint" aria-hidden="true">
-        <span>{snippet.lang === 'csharp' ? 'C# · .NET 10' : 'TypeScript · React 19'}</span>
+        <span>{snippet.label}</span>
         <span>
           Ln {snippet.code.slice(0, typed).split('\n').length}, Col {typed - snippet.code.lastIndexOf('\n', typed - 1)}
         </span>
