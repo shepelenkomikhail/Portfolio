@@ -34,7 +34,7 @@ export default function Nav({ theme, onToggleTheme }: { theme: Theme; onToggleTh
   return (
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-all duration-300 ${
-        scrolled || open ? 'border-b border-line bg-bg/75 backdrop-blur-xl' : 'border-b border-transparent'
+        scrolled || open ? 'border-b border-line bg-bg/95 pointer-fine:bg-bg/75 pointer-fine:backdrop-blur-xl' : 'border-b border-transparent'
       }`}
     >
       <nav className="container-x flex h-16 items-center justify-between" aria-label="Main">

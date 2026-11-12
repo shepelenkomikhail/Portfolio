@@ -20,7 +20,7 @@ export const featured = {
   title: 'Garden Rose',
   tagline: 'E-commerce platform for a Budapest florist',
   intro:
-    'An online shop for a florist with two boutiques in Budapest. I designed and built the whole product on my own, pro bono: storefront, bouquet builder, checkout, customer accounts, admin panel and reports.',
+    'The online flower shop of Garden Rose, a florist with two boutiques in Budapest. Customers order ready-made bouquets and gifts or design their own bouquet, then choose same-day delivery or pickup at a boutique. The shop team runs orders, catalogue, delivery slots and reports from the admin panel.',
   live: 'https://gardenrose.shepelenkomykhailo.com/en',
   note: 'Private repository — happy to walk through the code',
   images: [
@@ -29,16 +29,17 @@ export const featured = {
     { src: '/projects/gardenrose-builder.webp', alt: 'Garden Rose bouquet builder, step one: choosing the size' },
   ],
   metrics: [
-    { value: '240', label: 'unit & integration tests' },
-    { value: '4', label: 'languages: HU · EN · UA · RU' },
-    { value: '7', label: 'architecture decision records' },
-    { value: '0', label: 'axe-core WCAG 2.2 AA violations' },
+    { value: '4', label: 'languages: HU · EN · UA · RU, each with its own search-indexed pages' },
+    { value: '40k', label: 'lines of C# and TypeScript' },
+    { value: '0', label: 'WCAG 2.2 AA violations: usable with keyboard and screen readers' },
+    { value: '52', label: 'pages, including 23 admin screens' },
   ],
   highlights: [
-    'Modular monolith on .NET 10 — Web, Application, Core, Data and Integrations layers. Prices, delivery fees and slot rules are enforced only on the server.',
+    'Modular monolith on .NET 10 — Web, Application, Core, Data and Integrations layers with 150+ REST endpoints. Prices, delivery fees and slot rules are enforced only on the server.',
     'Bouquet builder with live pricing, same-day delivery slots, delivery fees from real driving distance (OpenRouteService), cart, checkout and customer accounts.',
     'SEO-aware server fallback: per-page meta tags, hreflang, JSON-LD and an HTML content shell, so crawlers see real content in a React SPA.',
     'Admin panel with orders, catalogue, delivery settings and sales reports; transactional email through an outbox; images resized to WebP on upload.',
+    '240 xUnit unit and integration tests and 7 architecture decision records.',
     'GitHub Actions CI/CD: lint, build, tests against PostgreSQL, EF migrations bundle, zip deploy to Azure App Service and a health-check smoke test.',
   ],
   stack: ['.NET 10', 'ASP.NET Core', 'EF Core 10', 'PostgreSQL 17', 'React 19', 'TypeScript', 'TanStack Query', 'Tailwind', 'shadcn/ui', 'Azure', 'GitHub Actions', 'xUnit'],

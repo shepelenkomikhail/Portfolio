@@ -63,10 +63,10 @@ export const skills: SkillGroup[] = [
 
 export const languages = [
   { name: 'English', level: 'C1' },
-  { name: 'Ukrainian', level: 'Native' },
+  { name: 'Italian', level: 'A2' },
   { name: 'Russian', level: 'Native' },
   { name: 'German', level: 'A2' },
-  { name: 'Italian', level: 'A2' },
+  { name: 'Ukrainian', level: 'Native' },
   { name: 'Hungarian', level: 'A2' },
 ] as const
 

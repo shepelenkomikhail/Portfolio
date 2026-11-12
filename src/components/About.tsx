@@ -38,7 +38,8 @@ export default function About() {
           </p>
           <p className="text-sm">
             Away from the keyboard: football — a football academy in Ukraine, then amateur clubs in Germany and Budapest — and
-            strength training.
+            the gym. I’m passionate about powerlifting and bodybuilding: the same mindset as engineering — a clear plan,
+            measured progress and consistency over time.
           </p>
         </div>
         <div className="reveal min-w-0" style={{ ['--delay' as string]: '120ms' }}>

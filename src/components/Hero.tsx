@@ -6,7 +6,7 @@ export default function Hero() {
     <section id="top" className="container-x relative pt-28 pb-16 sm:pt-36 lg:pb-24">
       <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.25fr_1fr]">
         <div>
-          <div className="reveal mb-6 inline-flex items-center gap-2.5 rounded-full border border-line bg-surface/70 px-3.5 py-1.5 text-xs text-muted backdrop-blur">
+          <div className="reveal mb-6 inline-flex items-center gap-2.5 rounded-full border border-line bg-surface/90 px-3.5 py-1.5 text-xs text-muted">
             <span className="pulse-dot h-2 w-2 rounded-full bg-green-400" />
             Open to new opportunities
           </div>

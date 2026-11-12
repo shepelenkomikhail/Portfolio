@@ -8,6 +8,8 @@ import { useEffect, useRef } from 'react'
  * - each firefly is a pre-rendered glow sprite drawn with drawImage (no per-frame gradients or shadows)
  * - particle count scales with screen area (24–64), device pixel ratio capped at 1.5
  * - capped at ~40 fps, fully paused while the tab is hidden
+ * - touch devices (phones/tablets): ≤ 26 flies, 30 fps, DPR 1, plain alpha blending, no redraw while a finger
+ *   scrolls, and the canvas is sized to the largest viewport so the iOS toolbar showing/hiding never reallocates it
  * - prefers-reduced-motion: draws one still frame and never animates
  */
 
@@ -23,7 +25,6 @@ interface Fly {
   alt: boolean
 }
 
-const FRAME_MS = 1000 / 40
 
 function makeSprite(rgb: string, size = 64): HTMLCanvasElement {
   const c = document.createElement('canvas')
@@ -55,6 +56,11 @@ export default function Fireflies({ theme }: { theme: 'dark' | 'light' }) {
     const sprite = makeSprite(isLight ? '214, 150, 40' : '245, 198, 107')
     const sprite2 = makeSprite(isLight ? '56, 140, 190' : '125, 211, 252')
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const touch = window.matchMedia('(pointer: coarse)').matches
+    const FRAME_MS = 1000 / (touch ? 30 : 40)
+    const MAX_FLIES = touch ? 26 : 64
+    // 'lighter' (additive) blending looks best on dark, but is slow in mobile Safari
+    const composite: GlobalCompositeOperation = isLight || touch ? 'source-over' : 'lighter'
 
     let width = 0
     let height = 0
@@ -74,20 +80,24 @@ export default function Fireflies({ theme }: { theme: 'dark' | 'light' }) {
     })
 
     const resize = () => {
-      const dpr = Math.min(window.devicePixelRatio || 1, 1.5)
+      const dpr = touch ? 1 : Math.min(window.devicePixelRatio || 1, 1.5)
+      // On phones use the largest viewport height (toolbar hidden) so scrolling never changes the canvas size
+      const h = touch ? Math.max(window.innerHeight, document.documentElement.clientHeight, window.screen.height) : window.innerHeight
+      if (canvas.width === Math.round(window.innerWidth * dpr) && canvas.height === Math.round(h * dpr)) return
       width = window.innerWidth
-      height = window.innerHeight
+      height = h
+      canvas.style.height = `${h}px`
       canvas.width = Math.round(width * dpr)
       canvas.height = Math.round(height * dpr)
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
-      const target = Math.max(24, Math.min(64, Math.round((width * height) / 26000)))
+      const target = Math.max(touch ? 18 : 24, Math.min(MAX_FLIES, Math.round((width * height) / 26000)))
       while (flies.length < target) flies.push(spawn())
       if (flies.length > target) flies = flies.slice(0, target)
     }
 
     const draw = (t: number) => {
       ctx.clearRect(0, 0, width, height)
-      ctx.globalCompositeOperation = isLight ? 'source-over' : 'lighter'
+      ctx.globalCompositeOperation = composite
       for (const f of flies) {
         // flicker: slow breathing with an occasional brighter blink
         const pulse = 0.5 + 0.5 * Math.sin(t * 0.0012 * f.speed + f.phase)
@@ -134,10 +144,13 @@ export default function Fireflies({ theme }: { theme: 'dark' | 'light' }) {
     let raf = 0
     let last = 0
     let acc = 0
+    let scrollingUntil = 0
     const loop = (t: number) => {
       raf = requestAnimationFrame(loop)
       const dt = last ? Math.min(t - last, 100) : FRAME_MS
       last = t
+      // on touch devices keep the main thread free for the finger while it scrolls; the last frame stays visible
+      if (touch && t < scrollingUntil) return
       acc += dt
       if (acc < FRAME_MS) return
       step(acc)
@@ -162,6 +175,9 @@ export default function Fireflies({ theme }: { theme: 'dark' | 'light' }) {
       mouse.active = true
     }
     const onLeave = () => (mouse.active = false)
+    const onScroll = () => {
+      scrollingUntil = performance.now() + 180
+    }
     let resizeTimer = 0
     const onResize = () => {
       window.clearTimeout(resizeTimer)
@@ -177,7 +193,8 @@ export default function Fireflies({ theme }: { theme: 'dark' | 'light' }) {
 
     window.addEventListener('resize', onResize)
     document.addEventListener('visibilitychange', onVisibility)
-    window.addEventListener('pointermove', onMove, { passive: true })
+    if (touch) window.addEventListener('scroll', onScroll, { passive: true })
+    else window.addEventListener('pointermove', onMove, { passive: true })
     document.documentElement.addEventListener('pointerleave', onLeave)
 
     return () => {
@@ -186,9 +203,10 @@ export default function Fireflies({ theme }: { theme: 'dark' | 'light' }) {
       window.removeEventListener('resize', onResize)
       document.removeEventListener('visibilitychange', onVisibility)
       window.removeEventListener('pointermove', onMove)
+      window.removeEventListener('scroll', onScroll)
       document.documentElement.removeEventListener('pointerleave', onLeave)
     }
   }, [theme])
 
-  return <canvas ref={canvasRef} aria-hidden="true" className="pointer-events-none fixed inset-0 z-0 h-full w-full" />
+  return <canvas ref={canvasRef} aria-hidden="true" className="pointer-events-none fixed top-0 left-0 z-0 h-full w-full" />
 }

@@ -150,10 +150,10 @@ function ProjectCard({ project, rank }: { project: Project; rank: number }) {
     <article className="reveal group card flex flex-col overflow-hidden transition duration-300 hover:-translate-y-1 hover:border-accent/50">
       <div className="relative overflow-hidden border-b border-line">
         <Cover project={project} />
-        <span className="absolute top-3 left-3 rounded-full bg-bg/80 px-2.5 py-1 font-mono text-[11px] text-ink backdrop-blur">
+        <span className="absolute top-3 left-3 rounded-full bg-bg/90 px-2.5 py-1 font-mono text-[11px] text-ink">
           #{String(rank).padStart(2, '0')}
         </span>
-        <span className="absolute top-3 right-3 rounded-full bg-bg/80 px-2.5 py-1 font-mono text-[11px] text-muted backdrop-blur">
+        <span className="absolute top-3 right-3 rounded-full bg-bg/90 px-2.5 py-1 font-mono text-[11px] text-muted">
           {project.kind}
         </span>
       </div>
