@@ -1,35 +1,215 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  font-family: Poppins, sans-serif;
-  color: #03045E;
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-  background-color: #FBF8CC;
+/* ---------- Design tokens (dark is the default) ---------- */
+:root,
+[data-theme="dark"] {
+  --bg: #0a0c11;
+  --bg-soft: #0f121a;
+  --surface: #131722;
+  --surface-2: #1a1f2c;
+  --border: #252b3a;
+  --text: #e8eaf0;
+  --muted: #9aa3b5;
+  --faint: #6b7487;
+  --accent: #f5c66b;
+  --accent-strong: #ffd98a;
+  --accent-ink: #1a1405;
+  --accent-soft: rgba(245, 198, 107, 0.12);
+  --glow: 245, 198, 107; /* firefly colour, as r, g, b */
+  --glow-2: 125, 211, 252;
+  --shadow: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 20px 40px -24px rgba(0, 0, 0, 0.8);
+  --code-kw: #c792ea;
+  --code-str: #c3e88d;
+  --code-num: #f78c6c;
+  --code-type: #ffcb6b;
+  --code-fn: #82aaff;
+  color-scheme: dark;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+[data-theme="light"] {
+  --bg: #f8f5ee;
+  --bg-soft: #f1ece1;
+  --surface: #fffdf8;
+  --surface-2: #f6f1e6;
+  --border: #e4dccb;
+  --text: #1a1d26;
+  --muted: #555d6e;
+  --faint: #7d8494;
+  --accent: #b7791f;
+  --accent-strong: #975a16;
+  --accent-ink: #fffaf0;
+  --accent-soft: rgba(183, 121, 31, 0.1);
+  --glow: 214, 150, 40;
+  --glow-2: 56, 140, 190;
+  --shadow: 0 1px 2px rgba(60, 40, 10, 0.04), 0 18px 36px -24px rgba(60, 40, 10, 0.25);
+  --code-kw: #8b3fb5;
+  --code-str: #3f7d20;
+  --code-num: #b5501f;
+  --code-type: #a2600a;
+  --code-fn: #2563b8;
+  color-scheme: light;
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", ui-sans-serif, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-bg: var(--bg);
+  --color-bg-soft: var(--bg-soft);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--border);
+  --color-ink: var(--text);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+}
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-h1 {
-    @apply text-5xl lg:text-7xl font-bold;
+/* Soft colour wash behind everything, above the page background, below the fireflies */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(60rem 40rem at 85% -10%, rgba(var(--glow), 0.08), transparent 60%),
+    radial-gradient(50rem 40rem at -10% 30%, rgba(var(--glow-2), 0.06), transparent 60%);
 }
 
-h2 {
-    @apply text-xl font-medium;
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
 }
 
-h3 {
-  @apply text-2xl font-semibold;
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
 }
 
-h4 {
-    @apply text-3xl lg:text-7xl font-bold;
+/* ---------- Components (Tailwind v4 utilities, so they can be composed with @apply) ---------- */
+@utility container-x {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
 }
 
-a {
-    @apply text-xl hover:cursor-pointer;
+@utility card {
+  background: color-mix(in oklab, var(--surface) 88%, transparent);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
+  border-radius: 1rem;
+}
+
+@utility chip {
+  @apply inline-flex items-center rounded-full border border-line bg-surface-2/70 px-2.5 py-1 font-mono text-[11px] leading-none text-muted;
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition duration-200 active:scale-[0.98] disabled:opacity-60;
+}
+@utility btn-primary {
+  @apply btn bg-accent text-accent-ink hover:bg-accent-strong;
+  box-shadow: 0 8px 30px -10px rgba(var(--glow), 0.7);
+}
+@utility btn-ghost {
+  @apply btn border border-line bg-surface/60 text-ink hover:border-accent hover:text-accent;
+}
+
+@utility eyebrow {
+  @apply font-mono text-xs tracking-[0.2em] text-accent uppercase;
+}
+
+@utility link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease;
+  &:hover {
+    background-size: 100% 1px;
+  }
+}
+
+/* ---------- Scroll reveal (see lib/useReveal) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--delay, 0ms);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Animated gradient on the hero name */
+.text-glow {
+  background: linear-gradient(100deg, var(--text) 20%, var(--accent) 50%, var(--text) 80%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: sheen 9s ease-in-out infinite;
+}
+@keyframes sheen {
+  0%, 100% { background-position: 100% 0; }
+  50% { background-position: 0% 0; }
+}
+
+/* Slowly rotating ring around the photo */
+.photo-ring {
+  background: conic-gradient(from 0deg, rgba(var(--glow), 0.9), rgba(var(--glow-2), 0.6), transparent 40%, rgba(var(--glow), 0.9));
+  animation: spin 14s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.pulse-dot {
+  animation: pulse 2.4s ease-out infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.55); }
+  80%, 100% { box-shadow: 0 0 0 10px rgba(74, 222, 128, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .text-glow, .photo-ring, .pulse-dot { animation: none; }
 }

@@ -1,11 +1,38 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="m.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mike</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Mykhailo Shepelenko — Full-Stack .NET &amp; React Developer</title>
+    <meta
+      name="description"
+      content="Mykhailo Shepelenko — full-stack developer in Budapest. ASP.NET Core, EF Core, PostgreSQL, Azure, React and TypeScript. Projects, experience and CV."
+    />
+    <link rel="canonical" href="https://shepelenkomykhailo.com/" />
+    <link rel="icon" type="image/png" href="/m.png" />
+    <meta name="theme-color" content="#0a0c11" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shepelenkomykhailo.com/" />
+    <meta property="og:title" content="Mykhailo Shepelenko — Full-Stack .NET & React Developer" />
+    <meta property="og:description" content="I build web products end to end — from the database schema to the last pixel." />
+    <meta property="og:image" content="https://shepelenkomykhailo.com/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Apply the saved theme before first paint so there is no flash -->
+    <script>
+      try {
+        var t = localStorage.getItem('theme')
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>
