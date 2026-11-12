@@ -73,9 +73,9 @@ function FeaturedProject() {
 
           <dl className="mt-6 grid grid-cols-2 gap-3">
             {featured.metrics.map((m) => (
-              <div key={m.label} className="flex flex-col-reverse rounded-xl border border-line bg-bg-soft/60 px-4 py-3">
-                <dt className="text-xs text-muted">{m.label}</dt>
-                <dd className="font-display text-2xl font-semibold text-accent">{m.value}</dd>
+              <div key={m.label} className="flex flex-col rounded-xl border border-line bg-bg-soft/60 px-4 py-3">
+                <dt className="order-2 mt-1 text-xs leading-snug text-muted">{m.label}</dt>
+                <dd className="order-1 font-display text-2xl leading-none font-semibold text-accent">{m.value}</dd>
               </div>
             ))}
           </dl>

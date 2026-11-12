@@ -84,10 +84,10 @@ export default function Hero() {
         {stats.map((s) => (
           <div
             key={s.label}
-            className="flex flex-col-reverse bg-bg-soft/90 p-5 sm:p-6"
+            className="flex flex-col justify-start bg-bg-soft/90 p-5 sm:p-6"
           >
-            <dt className="mt-1 text-sm text-muted">{s.label}</dt>
-            <dd className="font-display text-3xl font-semibold text-accent sm:text-4xl">{s.value}</dd>
+            <dt className="order-2 mt-1.5 text-sm leading-snug text-muted">{s.label}</dt>
+            <dd className="order-1 font-display text-3xl leading-none font-semibold text-accent sm:text-4xl">{s.value}</dd>
           </div>
         ))}
       </dl>
