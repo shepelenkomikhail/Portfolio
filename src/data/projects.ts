@@ -39,7 +39,6 @@ export const featured = {
     'Bouquet builder with live pricing, same-day delivery slots, delivery fees from real driving distance (OpenRouteService), cart, checkout and customer accounts.',
     'SEO-aware server fallback: per-page meta tags, hreflang, JSON-LD and an HTML content shell, so crawlers see real content in a React SPA.',
     'Admin panel with orders, catalogue, delivery settings and sales reports; transactional email through an outbox; images resized to WebP on upload.',
-    '240 xUnit unit and integration tests and 7 architecture decision records.',
     'GitHub Actions CI/CD: lint, build, tests against PostgreSQL, EF migrations bundle, zip deploy to Azure App Service and a health-check smoke test.',
   ],
   stack: ['.NET 10', 'ASP.NET Core', 'EF Core 10', 'PostgreSQL 17', 'React 19', 'TypeScript', 'TanStack Query', 'Tailwind', 'shadcn/ui', 'Azure', 'GitHub Actions', 'xUnit'],
@@ -49,6 +48,18 @@ export const featured = {
  * Everything else, strongest first.
  */
 export const projects: Project[] = [
+  {
+    slug: 'tapehouse',
+    title: 'Tapehouse',
+    tagline: 'Telegram Mini App + bot for real music playlists',
+    description:
+      'Forward audio to the bot and it lands in your Inbox. Sort tracks into playlists, drag to reorder, smart-shuffle, play in the app or send them back to a chat. Playlists sync across devices via Telegram CloudStorage; groups and channels get shared playlists.',
+    stack: ['React 19', 'TypeScript', 'Vite', 'Telegram Bot API', 'Mini Apps', 'Vercel Functions', 'Vercel Blob', 'Zod'],
+    image: '/projects/tapehouse.webp',
+    live: 'https://t.me/tapehouse_bot',
+    github: 'https://github.com/shepelenkomikhail/tapehouse',
+    kind: 'Full-stack',
+  },
   {
     slug: 'nutrition-book',
     title: 'Nutrition Book',
