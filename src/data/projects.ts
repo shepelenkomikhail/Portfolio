@@ -21,7 +21,7 @@ export const featured = {
   tagline: 'E-commerce platform for a Budapest florist',
   intro:
     'The online flower shop of Garden Rose, a florist with two boutiques in Budapest. Customers order ready-made bouquets and gifts or design their own bouquet, then choose same-day delivery or pickup at a boutique. The shop team runs orders, catalogue, delivery slots and reports from the admin panel.',
-  live: 'https://gardenrose.shepelenkomykhailo.com/en',
+  live: 'https://gardenroseflowersbp.com/en',
   note: 'Private repository — happy to walk through the code',
   images: [
     { src: '/projects/gardenrose.webp', alt: 'Garden Rose home page with the hero bouquet illustration' },

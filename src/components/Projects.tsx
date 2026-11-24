@@ -31,7 +31,7 @@ function FeaturedProject() {
               <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
               <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
               <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
-              <span className="ml-3 truncate font-mono text-[11px] text-faint">gardenrose.shepelenkomykhailo.com</span>
+              <span className="ml-3 truncate font-mono text-[11px] text-faint">gardenroseflowersbp.com</span>
             </div>
             <img
               key={image.src}
